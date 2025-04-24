@@ -35,7 +35,7 @@ export class ThemeService {
     }
   };
 
-  public currentTheme = signal<Theme['name']>('light');
+  public currentTheme = signal<Theme['name']>('dark');
 
   constructor() {
     this.loadTheme();
@@ -47,7 +47,7 @@ export class ThemeService {
 
   private loadTheme(): void {
     if (!this.isBrowser()) {
-      // Default to light theme in SSR
+      // Default to dark theme in SSR
       return;
     }
 
@@ -55,18 +55,11 @@ export class ThemeService {
     if (savedTheme) {
       this.setTheme(savedTheme as Theme['name']);
     } else {
-      this.setThemeFromSystemPreference();
+      // Always default to dark theme
+      this.setTheme('dark');
     }
   }
 
-  private setThemeFromSystemPreference(): void {
-    if (!this.isBrowser()) {
-      return;
-    }
-    
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    this.setTheme(prefersDark ? 'dark' : 'light');
-  }
 
   public setTheme(theme: Theme['name']): void {
     const selectedTheme = theme === 'dark' ? this.darkTheme : this.lightTheme;

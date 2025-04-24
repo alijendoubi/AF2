@@ -8,6 +8,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { connectAuthEmulator, getAuth, provideAuth } from '@angular/fire/auth';
 import { connectFirestoreEmulator, enableIndexedDbPersistence, getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { connectStorageEmulator, getStorage, provideStorage } from '@angular/fire/storage';
 
 // Translation
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -58,6 +59,14 @@ export const appConfig: ApplicationConfig = {
       //   connectFirestoreEmulator(firestore, 'localhost', 8080);
       // }
       return firestore;
+    }),
+    provideStorage(() => {
+      const storage = getStorage();
+      // Use emulator in development if needed
+      // if (!environment.production) {
+      //   connectStorageEmulator(storage, 'localhost', 9199);
+      // }
+      return storage;
     }),
     
     importProvidersFrom(

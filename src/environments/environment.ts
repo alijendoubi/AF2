@@ -13,7 +13,8 @@ export const environment = {
     serviceId: '{{EMAILJS_SERVICE_ID}}',
     welcomeTemplateId: '{{EMAILJS_WELCOME_TEMPLATE_ID}}',
     contactTemplateId: '{{EMAILJS_CONTACT_TEMPLATE_ID}}',
-    newsletterTemplateId: '{{EMAILJS_NEWSLETTER_TEMPLATE_ID}}'
+    newsletterTemplateId: '{{EMAILJS_NEWSLETTER_TEMPLATE_ID}}',
+    betaSignupTemplateId: '{{EMAILJS_BETA_SIGNUP_TEMPLATE_ID}}'
   }
 };
 

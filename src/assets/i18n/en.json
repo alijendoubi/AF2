@@ -1,261 +1,121 @@
 {
   "APP": {
     "TITLE": "AutoFlowOS",
-    "WELCOME": "Welcome to AF2",
-    "LOADING": "Loading...",
-    "ERROR": "An error occurred",
     "TAGLINE": "Streamline Your Workflow"
   },
-  "NAVIGATION": {
-    "HOME": "Home",
-    "LOGIN": "Login",
-    "SIGNUP": "Sign Up",
-    "DASHBOARD": "Dashboard",
-    "PROFILE": "Profile",
-    "CONTACT": "Contact",
-    "PRICING": "Pricing",
-    "PRIVACY": "Privacy",
-    "ABOUT": "About",
-    "ADMIN": "Admin"
-  },
-  "NAV": {
-    "HOME": "Home",
-    "DASHBOARD": "Dashboard",
-    "PROFILE": "Profile",
-    "ADMIN": "Admin Panel",
-    "LOGIN": "Login",
-    "SIGNUP": "Sign Up",
-    "LOGOUT": "Logout"
-  },
   "HOME": {
-    "TITLE": "Welcome to Our Platform",
-    "DESCRIPTION": "Discover all the features and services we offer",
-    "GET_STARTED": "Get Started",
     "HERO": {
-      "TITLE": "Automate Your Workflow",
-      "SUBTITLE": "Powerful tools to streamline your business processes",
-      "CTA": "Get Started"
+      "TITLE": "Automate Your Workflow with AutoFlowOS",
+      "SUBTITLE": "Streamline your processes, boost productivity, and reduce manual tasks with our intelligent automation platform.",
+      "CTA": "Join Beta",
+      "DASHBOARD": "Open Dashboard"
+    },
+    "ABOUT": {
+      "TITLE": "About AutoFlowOS",
+      "DESCRIPTION": "AutoFlowOS is your all-in-one workflow automation solution, designed to make complex processes simple and efficient.",
+      "ADDITIONAL_TEXT": "Our platform combines cutting-edge technology with intuitive design to help businesses of all sizes achieve more with less effort.",
+      "LATEST_UPDATE": "Now featuring AI-powered workflow suggestions!"
+    },
+    "MISSION": {
+      "TITLE": "Our Mission",
+      "STATEMENT": "To empower organizations by automating complex workflows, enabling teams to focus on what truly matters.",
+      "VALUES": {
+        "INNOVATION": "Innovation First",
+        "INNOVATION_TEXT": "Constantly pushing boundaries with cutting-edge automation solutions.",
+        "SIMPLICITY": "Simplicity at Core",
+        "SIMPLICITY_TEXT": "Making complex automation accessible and easy to understand.",
+        "EMPOWERMENT": "User Empowerment",
+        "EMPOWERMENT_TEXT": "Giving teams the tools they need to excel in their work."
+      }
     },
     "FEATURES": {
-      "TITLE": "Features",
+      "TITLE": "Key Features",
+      "SUBTITLE": "Discover the powerful features that make AutoFlowOS your ideal automation partner.",
       "AUTOMATION": {
-        "TITLE": "Workflow Automation",
-        "DESCRIPTION": "Automate repetitive tasks and focus on what matters most"
+        "TITLE": "Smart Automation",
+        "DESCRIPTION": "Build and deploy automated workflows with our intuitive drag-and-drop interface."
       },
       "ANALYTICS": {
-        "TITLE": "Real-time Analytics",
-        "DESCRIPTION": "Get insights into your business performance with powerful dashboards"
+        "TITLE": "Advanced Analytics",
+        "DESCRIPTION": "Gain valuable insights with real-time monitoring and detailed performance analytics."
       },
       "INTEGRATION": {
         "TITLE": "Seamless Integration",
-        "DESCRIPTION": "Connect with your favorite tools and services"
+        "DESCRIPTION": "Connect with your favorite tools and services effortlessly."
       },
       "SECURITY": {
         "TITLE": "Enterprise Security",
-        "DESCRIPTION": "Your data is protected with industry-leading security measures"
+        "DESCRIPTION": "Bank-grade security with advanced encryption and compliance features."
       }
     },
-    "ABOUT": {
-      "TITLE": "About Us",
-      "DESCRIPTION": "AutoFlowOS is a cutting-edge SaaS platform designed to help businesses of all sizes automate their workflows and improve productivity."
-    },
     "CONTACT": {
-      "TITLE": "Contact Us",
+      "TITLE": "Get in Touch",
+      "SUBTITLE": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
       "NAME": "Name",
       "EMAIL": "Email",
       "SUBJECT": "Subject",
       "MESSAGE": "Message",
-      "SUBMIT": "Submit",
-      "SUCCESS": "Your message has been sent successfully!",
-      "ERROR": "There was an error sending your message. Please try again."
+      "SUBMIT": "Send Message",
+      "SUCCESS": "Thank you! We'll be in touch shortly.",
+      "ERROR": "Oops! Something went wrong. Please try again."
     },
     "NEWSLETTER": {
-      "TITLE": "Subscribe to our newsletter",
+      "TITLE": "Stay Updated",
+      "DESCRIPTION": "Subscribe to our newsletter for the latest updates, tips, and insights.",
       "PLACEHOLDER": "Enter your email",
       "SUBMIT": "Subscribe",
-      "SUCCESS": "Thank you for subscribing!",
-      "ERROR": "There was an error subscribing. Please try again."
+      "SUCCESS": "Thanks for subscribing!",
+      "ERROR": "Subscription failed. Please try again."
     }
   },
-  "LOGIN": {
-    "TITLE": "Login",
-    "EMAIL": "Email",
-    "PASSWORD": "Password",
-    "SUBMIT": "Sign In",
-    "FORGOT_PASSWORD": "Forgot Password?",
-    "NO_ACCOUNT": "Don't have an account?",
-    "SIGNUP_LINK": "Create an account"
-  },
-  "SIGNUP": {
-    "TITLE": "Create Account",
-    "NAME": "Full Name",
-    "EMAIL": "Email",
-    "PASSWORD": "Password",
-    "CONFIRM_PASSWORD": "Confirm Password",
-    "SUBMIT": "Sign Up",
-    "HAVE_ACCOUNT": "Already have an account?",
-    "LOGIN_LINK": "Sign in"
-  },
-  "AUTH": {
-    "LOGIN": {
-      "TITLE": "Login",
-      "EMAIL": "Email",
-      "PASSWORD": "Password",
-      "SUBMIT": "Login",
-      "FORGOT_PASSWORD": "Forgot password?",
-      "NO_ACCOUNT": "Don't have an account?",
-      "SIGNUP": "Sign up",
-      "ERROR": "Invalid email or password"
-    },
-    "SIGNUP": {
-      "TITLE": "Sign Up",
-      "NAME": "Name",
-      "EMAIL": "Email",
-      "PASSWORD": "Password",
-      "CONFIRM_PASSWORD": "Confirm Password",
-      "SUBMIT": "Sign Up",
-      "HAVE_ACCOUNT": "Already have an account?",
-      "LOGIN": "Login",
-      "ERROR": "There was an error creating your account",
-      "PASSWORD_MISMATCH": "Passwords do not match"
+  "BETA": {
+    "MODAL": {
+      "TITLE": "Join Our Beta Program",
+      "DESCRIPTION": "Be among the first to experience the future of workflow automation.",
+      "EMAIL": "Email Address",
+      "EMAIL_PLACEHOLDER": "your@email.com",
+      "NAME": "Full Name",
+      "COMPANY": "Company (Optional)",
+      "SUBMIT": "Join Beta",
+      "CLOSE": "Close"
     }
-  },
-  "DASHBOARD": {
-    "TITLE": "Dashboard",
-    "WELCOME_MESSAGE": "Welcome back, {{username}}!",
-    "SUMMARY": "Summary",
-    "RECENT_ACTIVITY": "Recent Activity",
-    "WELCOME": "Welcome, {{name}}!",
-    "OVERVIEW": "Overview",
-    "STATS": {
-      "USERS": "Total Users",
-      "SUBSCRIPTIONS": "Active Subscriptions",
-      "REVENUE": "Monthly Revenue"
-    },
-    "ACTIVITY": {
-      "TITLE": "Recent Activity",
-      "NO_ACTIVITY": "No recent activity"
-    },
-    "SYSTEM_HEALTH": {
-      "TITLE": "System Health",
-      "STATUS": {
-        "HEALTHY": "Healthy",
-        "WARNING": "Warning",
-        "CRITICAL": "Critical"
-      }
-    },
-    "SUBSCRIPTION": {
-      "TITLE": "Your Subscription",
-      "PLAN": "Current Plan",
-      "STATUS": "Status",
-      "RENEWAL": "Next Renewal",
-      "UPGRADE": "Upgrade Plan"
-    }
-  },
-  "PROFILE": {
-    "TITLE": "Your Profile",
-    "PERSONAL_INFO": "Personal Information",
-    "UPDATE_INFO": "Update Information",
-    "CHANGE_PASSWORD": "Change Password",
-    "SAVE": "Save Changes",
-    "NAME": "Name",
-    "EMAIL": "Email",
-    "UPDATE": "Update Profile",
-    "PASSWORD": {
-      "TITLE": "Change Password",
-      "CURRENT": "Current Password",
-      "NEW": "New Password",
-      "CONFIRM": "Confirm New Password",
-      "UPDATE": "Update Password"
-    }
-  },
-  "CONTACT": {
-    "TITLE": "Contact Us",
-    "NAME": "Your Name",
-    "EMAIL": "Your Email",
-    "MESSAGE": "Message",
-    "SUBMIT": "Send Message",
-    "SUCCESS": "Your message has been sent successfully!",
-    "ERROR": "There was an error sending your message. Please try again.",
-    "SUBTITLE": "We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible."
-  },
-  "PRICING": {
-    "TITLE": "Pricing Plans",
-    "BASIC_PLAN": "Basic Plan",
-    "STANDARD_PLAN": "Standard Plan",
-    "PREMIUM_PLAN": "Premium Plan",
-    "MONTHLY": "Monthly",
-    "ANNUALLY": "Annually",
-    "GET_STARTED": "Get Started",
-    "SUBTITLE": "Choose the plan that's right for you"
-  },
-  "PRIVACY": {
-    "TITLE": "Privacy Policy",
-    "LAST_UPDATED": "Last Updated:",
-    "INTRO": "This Privacy Policy describes how we collect, use, and share your personal information."
-  },
-  "ABOUT": {
-    "TITLE": "About Us",
-    "MISSION": "Our Mission",
-    "VISION": "Our Vision",
-    "TEAM": "Our Team",
-    "SUBTITLE": "Learn more about our mission and team"
-  },
-  "ADMIN": {
-    "TITLE": "Admin Dashboard",
-    "USERS": "Users",
-    "ANALYTICS": "Analytics",
-    "SETTINGS": "Settings"
-  },
-  "BUTTONS": {
-    "SUBMIT": "Submit",
-    "CANCEL": "Cancel",
-    "SAVE": "Save",
-    "DELETE": "Delete",
-    "EDIT": "Edit",
-    "BACK": "Back"
-  },
-  "ERRORS": {
-    "REQUIRED": "This field is required",
-    "EMAIL_INVALID": "Please enter a valid email address",
-    "PASSWORD_LENGTH": "Password must be at least 8 characters long",
-    "PASSWORDS_NOT_MATCH": "Passwords do not match",
-    "UNAUTHORIZED": "You are not authorized to access this page",
-    "NOT_FOUND": "Page not found"
-  },
-  "COMMON": {
-    "LOADING": "Loading...",
-    "ERROR": "An error occurred",
-    "SUCCESS": "Success!",
-    "SAVE": "Save",
-    "CANCEL": "Cancel",
-    "DELETE": "Delete",
-    "EDIT": "Edit",
-    "VIEW": "View",
-    "SEARCH": "Search",
-    "FILTER": "Filter",
-    "SORT": "Sort",
-    "ACTIONS": "Actions",
-    "CONFIRM": "Are you sure?",
-    "YES": "Yes",
-    "NO": "No"
   },
   "FOOTER": {
-    "QUICK_LINKS": "Quick Links",
+    "DESCRIPTION": "AutoFlowOS - Making workflow automation accessible to everyone.",
+    "COMPANY": "Company",
     "ABOUT": "About",
+    "FEATURES": "Features",
     "PRICING": "Pricing",
     "CONTACT": "Contact",
+    "RESOURCES": "Resources",
+    "DOCUMENTATION": "Documentation",
+    "API": "API",
+    "SUPPORT": "Support",
+    "BLOG": "Blog",
+    "LEGAL": "Legal",
     "PRIVACY": "Privacy Policy",
-    "CONNECT": "Connect",
-    "COPYRIGHT": "© {{year}} AutoFlowOS. All rights reserved."
+    "TERMS": "Terms of Service",
+    "SECURITY": "Security",
+    "ACCOUNT": "Account",
+    "LOGIN": "Login",
+    "SIGNUP": "Sign Up",
+    "DASHBOARD": "Dashboard",
+    "RIGHTS": "All rights reserved."
   },
-  "THEME": {
-    "LIGHT": "Light Mode",
-    "DARK": "Dark Mode"
+  "VALIDATION": {
+    "REQUIRED": "This field is required",
+    "EMAIL": "Please enter a valid email address",
+    "VALID_EMAIL": "Please enter a valid email address"
   },
   "LANGUAGE": {
     "ENGLISH": "English",
     "FRENCH": "French",
     "GERMAN": "German"
+  },
+  "NAV": {
+    "HOME": "Home",
+    "DASHBOARD": "Dashboard",
+    "SIGNUP": "Sign Up",
+    "LOGIN": "Login"
   }
 }

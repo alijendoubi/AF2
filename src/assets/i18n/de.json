@@ -14,12 +14,14 @@
   },
   "HOME": {
     "HERO": {
-      "TITLE": "Automatisieren Sie Ihren Arbeitsablauf",
-      "SUBTITLE": "Leistungsstarke Tools zur Optimierung Ihrer Geschäftsprozesse",
-      "CTA": "Jetzt starten"
+      "TITLE": "Automatisieren Sie Ihren Arbeitsablauf mit AutoFlowOS",
+      "SUBTITLE": "Optimieren Sie Ihre Prozesse, steigern Sie die Produktivität und reduzieren Sie manuelle Aufgaben mit unserer intelligenten Automatisierungsplattform.",
+      "CTA": "Beta Beitreten",
+      "DASHBOARD": "Dashboard Öffnen"
     },
     "FEATURES": {
-      "TITLE": "Funktionen",
+      "TITLE": "Hauptfunktionen",
+      "SUBTITLE": "Entdecken Sie die leistungsstarken Funktionen, die AutoFlowOS zu Ihrem idealen Automatisierungspartner machen.",
       "AUTOMATION": {
         "TITLE": "Workflow-Automatisierung",
         "DESCRIPTION": "Automatisieren Sie wiederkehrende Aufgaben und konzentrieren Sie sich auf das Wesentliche"
@@ -38,8 +40,22 @@
       }
     },
     "ABOUT": {
-      "TITLE": "Über Uns",
-      "DESCRIPTION": "AutoFlowOS ist eine hochmoderne SaaS-Plattform, die Unternehmen jeder Größe dabei hilft, ihre Arbeitsabläufe zu automatisieren und die Produktivität zu steigern. Unsere Mission ist es, komplexe Geschäftsprozesse zu vereinfachen und Teams zu befähigen, sich auf Innovation und Wachstum zu konzentrieren."
+      "TITLE": "Über AutoFlowOS",
+      "DESCRIPTION": "AutoFlowOS ist Ihre All-in-One-Lösung für Workflow-Automatisierung, entwickelt um komplexe Prozesse einfach und effizient zu gestalten.",
+      "ADDITIONAL_TEXT": "Unsere Plattform kombiniert modernste Technologie mit intuitivem Design, um Unternehmen jeder Größe dabei zu helfen, mehr mit weniger Aufwand zu erreichen.",
+      "LATEST_UPDATE": "Jetzt mit KI-gestützten Workflow-Vorschlägen!"
+    },
+    "MISSION": {
+      "TITLE": "Unsere Mission",
+      "STATEMENT": "Organisationen durch die Automatisierung komplexer Workflows zu stärken und Teams zu ermöglichen, sich auf das Wesentliche zu konzentrieren.",
+      "VALUES": {
+        "INNOVATION": "Innovation zuerst",
+        "INNOVATION_TEXT": "Kontinuierliche Weiterentwicklung mit modernsten Automatisierungslösungen.",
+        "SIMPLICITY": "Einfachheit im Kern",
+        "SIMPLICITY_TEXT": "Komplexe Automatisierung zugänglich und verständlich machen.",
+        "EMPOWERMENT": "Nutzer-Empowerment",
+        "EMPOWERMENT_TEXT": "Teams die Werkzeuge geben, die sie für exzellente Arbeit benötigen."
+      }
     },
     "CONTACT": {
       "TITLE": "Kontaktieren Sie Uns",
@@ -52,11 +68,24 @@
       "ERROR": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
     },
     "NEWSLETTER": {
-      "TITLE": "Abonnieren Sie unseren Newsletter",
+      "TITLE": "Bleiben Sie auf dem Laufenden",
+      "DESCRIPTION": "Abonnieren Sie unseren Newsletter für die neuesten Updates, Tipps und Einblicke.",
       "PLACEHOLDER": "E-Mail eingeben",
       "SUBMIT": "Abonnieren",
       "SUCCESS": "Vielen Dank für Ihr Abonnement!",
       "ERROR": "Beim Abonnieren ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "BETA": {
+    "MODAL": {
+      "TITLE": "Treten Sie unserem Beta-Programm bei",
+      "DESCRIPTION": "Seien Sie unter den Ersten, die die Zukunft der Workflow-Automatisierung erleben.",
+      "EMAIL": "E-Mail-Adresse",
+      "EMAIL_PLACEHOLDER": "ihre@email.de",
+      "NAME": "Vollständiger Name",
+      "COMPANY": "Unternehmen (Optional)",
+      "SUBMIT": "Beta Beitreten",
+      "CLOSE": "Schließen"
     }
   },
   "AUTH": {
@@ -158,13 +187,26 @@
     "NO": "Nein"
   },
   "FOOTER": {
-    "QUICK_LINKS": "Schnelllinks",
+    "DESCRIPTION": "AutoFlowOS - Workflow-Automatisierung für jeden zugänglich machen.",
+    "COMPANY": "Unternehmen",
     "ABOUT": "Über uns",
+    "FEATURES": "Funktionen",
     "PRICING": "Preise",
     "CONTACT": "Kontakt",
+    "RESOURCES": "Ressourcen",
+    "DOCUMENTATION": "Dokumentation",
+    "API": "API",
+    "SUPPORT": "Support",
+    "BLOG": "Blog",
+    "LEGAL": "Rechtliches",
     "PRIVACY": "Datenschutzrichtlinie",
-    "CONNECT": "Verbinden",
-    "COPYRIGHT": "© {{year}} AutoFlowOS. Alle Rechte vorbehalten."
+    "TERMS": "Nutzungsbedingungen",
+    "SECURITY": "Sicherheit",
+    "ACCOUNT": "Konto",
+    "LOGIN": "Anmelden",
+    "SIGNUP": "Registrieren",
+    "DASHBOARD": "Dashboard",
+    "RIGHTS": "Alle Rechte vorbehalten."
   },
   "THEME": {
     "LIGHT": "Heller Modus",
@@ -174,5 +216,10 @@
     "ENGLISH": "Englisch",
     "FRENCH": "Französisch",
     "GERMAN": "Deutsch"
+  },
+  "VALIDATION": {
+    "REQUIRED": "Dieses Feld ist erforderlich",
+    "EMAIL": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+    "VALID_EMAIL": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
   }
 }

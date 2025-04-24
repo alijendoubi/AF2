@@ -14,12 +14,14 @@
   },
   "HOME": {
     "HERO": {
-      "TITLE": "Automatisez Votre Flux de Travail",
-      "SUBTITLE": "Des outils puissants pour simplifier vos processus d'entreprise",
-      "CTA": "Commencer"
+      "TITLE": "Automatisez Votre Flux de Travail avec AutoFlowOS",
+      "SUBTITLE": "Simplifiez vos processus, augmentez votre productivité et réduisez les tâches manuelles grâce à notre plateforme d'automatisation intelligente.",
+      "CTA": "Rejoindre la Bêta",
+      "DASHBOARD": "Accéder au Tableau de Bord"
     },
     "FEATURES": {
-      "TITLE": "Fonctionnalités",
+      "TITLE": "Fonctionnalités Clés",
+      "SUBTITLE": "Découvrez les fonctionnalités puissantes qui font d'AutoFlowOS votre partenaire idéal en automatisation.",
       "AUTOMATION": {
         "TITLE": "Automatisation des Flux",
         "DESCRIPTION": "Automatisez les tâches répétitives et concentrez-vous sur l'essentiel"
@@ -38,8 +40,22 @@
       }
     },
     "ABOUT": {
-      "TITLE": "À Propos de Nous",
-      "DESCRIPTION": "AutoFlowOS est une plateforme SaaS de pointe conçue pour aider les entreprises de toutes tailles à automatiser leurs flux de travail et à améliorer leur productivité. Notre mission est de simplifier les processus d'entreprise complexes et de permettre aux équipes de se concentrer sur l'innovation et la croissance."
+      "TITLE": "À Propos d'AutoFlowOS",
+      "DESCRIPTION": "AutoFlowOS est votre solution tout-en-un d'automatisation des flux de travail, conçue pour rendre simples et efficaces les processus complexes.",
+      "ADDITIONAL_TEXT": "Notre plateforme combine une technologie de pointe avec une conception intuitive pour aider les entreprises de toutes tailles à accomplir plus avec moins d'effort.",
+      "LATEST_UPDATE": "Maintenant avec des suggestions de flux de travail alimentées par l'IA !"
+    },
+    "MISSION": {
+      "TITLE": "Notre Mission",
+      "STATEMENT": "Permettre aux organisations d'automatiser les flux de travail complexes, permettant aux équipes de se concentrer sur l'essentiel.",
+      "VALUES": {
+        "INNOVATION": "L'Innovation d'Abord",
+        "INNOVATION_TEXT": "Repousser constamment les limites avec des solutions d'automatisation de pointe.",
+        "SIMPLICITY": "La Simplicité au Cœur",
+        "SIMPLICITY_TEXT": "Rendre l'automatisation complexe accessible et facile à comprendre.",
+        "EMPOWERMENT": "L'Autonomisation des Utilisateurs",
+        "EMPOWERMENT_TEXT": "Donner aux équipes les outils dont elles ont besoin pour exceller dans leur travail."
+      }
     },
     "CONTACT": {
       "TITLE": "Contactez-Nous",
@@ -52,11 +68,24 @@
       "ERROR": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
     },
     "NEWSLETTER": {
-      "TITLE": "Abonnez-vous à notre newsletter",
+      "TITLE": "Restez Informé",
+      "DESCRIPTION": "Abonnez-vous à notre newsletter pour recevoir les dernières mises à jour, conseils et informations.",
       "PLACEHOLDER": "Entrez votre email",
       "SUBMIT": "S'abonner",
       "SUCCESS": "Merci de vous être abonné!",
       "ERROR": "Une erreur s'est produite lors de l'abonnement. Veuillez réessayer."
+    }
+  },
+  "BETA": {
+    "MODAL": {
+      "TITLE": "Rejoignez Notre Programme Bêta",
+      "DESCRIPTION": "Soyez parmi les premiers à découvrir le futur de l'automatisation des flux de travail.",
+      "EMAIL": "Adresse Email",
+      "EMAIL_PLACEHOLDER": "votre@email.com",
+      "NAME": "Nom Complet",
+      "COMPANY": "Entreprise (Optionnel)",
+      "SUBMIT": "Rejoindre la Bêta",
+      "CLOSE": "Fermer"
     }
   },
   "AUTH": {
@@ -158,13 +187,26 @@
     "NO": "Non"
   },
   "FOOTER": {
-    "QUICK_LINKS": "Liens Rapides",
+    "DESCRIPTION": "AutoFlowOS - Rendre l'automatisation des flux de travail accessible à tous.",
+    "COMPANY": "Entreprise",
     "ABOUT": "À Propos",
+    "FEATURES": "Fonctionnalités",
     "PRICING": "Tarification",
     "CONTACT": "Contact",
+    "RESOURCES": "Ressources",
+    "DOCUMENTATION": "Documentation",
+    "API": "API",
+    "SUPPORT": "Support",
+    "BLOG": "Blog",
+    "LEGAL": "Légal",
     "PRIVACY": "Politique de Confidentialité",
-    "CONNECT": "Connecter",
-    "COPYRIGHT": "© {{year}} AutoFlowOS. Tous droits réservés."
+    "TERMS": "Conditions d'Utilisation",
+    "SECURITY": "Sécurité",
+    "ACCOUNT": "Compte",
+    "LOGIN": "Connexion",
+    "SIGNUP": "S'inscrire",
+    "DASHBOARD": "Tableau de Bord",
+    "RIGHTS": "Tous droits réservés."
   },
   "THEME": {
     "LIGHT": "Mode Clair",
@@ -174,5 +216,10 @@
     "ENGLISH": "Anglais",
     "FRENCH": "Français",
     "GERMAN": "Allemand"
+  },
+  "VALIDATION": {
+    "REQUIRED": "Ce champ est obligatoire",
+    "EMAIL": "Veuillez saisir une adresse email valide",
+    "VALID_EMAIL": "Veuillez saisir une adresse email valide"
   }
 }

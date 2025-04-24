@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AuthService, ThemeService } from '../../services';
+import { AuthService } from '../../services';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -36,10 +36,6 @@ import { TranslateModule } from '@ngx-translate/core';
           
           <div class="d-flex align-items-center">
             <app-language-switcher class="me-2"></app-language-switcher>
-            
-            <button class="btn btn-link" (click)="themeService.toggleTheme()" title="{{ (themeService.isDarkTheme() ? 'THEME.LIGHT' : 'THEME.DARK') | translate }}">
-              <i [class]="themeService.isDarkTheme() ? 'bi bi-sun' : 'bi bi-moon'"></i>
-            </button>
             
             @if (authService.isAuthenticated()) {
               <div class="dropdown ms-2">
@@ -92,7 +88,6 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class NavbarComponent {
   protected authService = inject(AuthService);
-  protected themeService = inject(ThemeService);
 
   async logout(): Promise<void> {
     await this.authService.logout();

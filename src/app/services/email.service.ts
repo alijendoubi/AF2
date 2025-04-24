@@ -76,5 +76,25 @@ export class EmailService {
       this.isLoadingSubject.next(false);
     }
   }
+
+  async submitBetaSignup(email: string, name: string, company?: string): Promise<void> {
+    try {
+      this.isLoadingSubject.next(true);
+      await send(
+        environment.emailJs.serviceId,
+        environment.emailJs.betaSignupTemplateId,
+        {
+          subscriber_email: email,
+          subscriber_name: name,
+          company: company || 'Not specified',
+        }
+      );
+    } catch (error) {
+      console.error('Beta signup error:', error);
+      throw error;
+    } finally {
+      this.isLoadingSubject.next(false);
+    }
+  }
 }
 
