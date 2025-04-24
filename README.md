@@ -1,4 +1,4 @@
-# AutoFlowOS Angular Application
+# AutoFlowOS SaaS
 
 ## Bundle Size and CommonJS Dependency Optimizations
 
