@@ -41,7 +41,16 @@ export class ThemeService {
     this.loadTheme();
   }
 
+  private isBrowser(): boolean {
+    return typeof window !== 'undefined' && typeof localStorage !== 'undefined';
+  }
+
   private loadTheme(): void {
+    if (!this.isBrowser()) {
+      // Default to light theme in SSR
+      return;
+    }
+
     const savedTheme = localStorage.getItem(this.STORAGE_KEY);
     if (savedTheme) {
       this.setTheme(savedTheme as Theme['name']);
@@ -51,6 +60,10 @@ export class ThemeService {
   }
 
   private setThemeFromSystemPreference(): void {
+    if (!this.isBrowser()) {
+      return;
+    }
+    
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     this.setTheme(prefersDark ? 'dark' : 'light');
   }
@@ -58,19 +71,23 @@ export class ThemeService {
   public setTheme(theme: Theme['name']): void {
     const selectedTheme = theme === 'dark' ? this.darkTheme : this.lightTheme;
     
-    // Remove previous theme class
-    document.body.classList.remove(this.DARK_THEME_CLASS, this.LIGHT_THEME_CLASS);
-    // Add new theme class
-    document.body.classList.add(`${theme}-theme`);
+    if (this.isBrowser()) {
+      // Remove previous theme class
+      document.body.classList.remove(this.DARK_THEME_CLASS, this.LIGHT_THEME_CLASS);
+      // Add new theme class
+      document.body.classList.add(`${theme}-theme`);
 
-    // Apply CSS custom properties
-    Object.entries(selectedTheme.properties).forEach(([property, value]) => {
-      document.documentElement.style.setProperty(property, value);
-    });
+      // Apply CSS custom properties
+      Object.entries(selectedTheme.properties).forEach(([property, value]) => {
+        document.documentElement.style.setProperty(property, value);
+      });
 
-    // Update signal and save preference
+      // Save preference to localStorage
+      localStorage.setItem(this.STORAGE_KEY, theme);
+    }
+
+    // Update signal (works in both browser and server)
     this.currentTheme.set(theme);
-    localStorage.setItem(this.STORAGE_KEY, theme);
   }
 
   public toggleTheme(): void {
@@ -82,4 +99,3 @@ export class ThemeService {
     return this.currentTheme() === 'dark';
   }
 }
-

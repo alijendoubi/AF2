@@ -1,0 +1,178 @@
+{
+  "APP": {
+    "TITLE": "AutoFlowOS",
+    "TAGLINE": "Simplifiez Votre Flux de Travail"
+  },
+  "NAV": {
+    "HOME": "Accueil",
+    "DASHBOARD": "Tableau de Bord",
+    "PROFILE": "Profil",
+    "ADMIN": "Panneau d'Administration",
+    "LOGIN": "Connexion",
+    "SIGNUP": "S'inscrire",
+    "LOGOUT": "Déconnexion"
+  },
+  "HOME": {
+    "HERO": {
+      "TITLE": "Automatisez Votre Flux de Travail",
+      "SUBTITLE": "Des outils puissants pour simplifier vos processus d'entreprise",
+      "CTA": "Commencer"
+    },
+    "FEATURES": {
+      "TITLE": "Fonctionnalités",
+      "AUTOMATION": {
+        "TITLE": "Automatisation des Flux",
+        "DESCRIPTION": "Automatisez les tâches répétitives et concentrez-vous sur l'essentiel"
+      },
+      "ANALYTICS": {
+        "TITLE": "Analyses en Temps Réel",
+        "DESCRIPTION": "Obtenez des informations sur les performances de votre entreprise grâce à des tableaux de bord puissants"
+      },
+      "INTEGRATION": {
+        "TITLE": "Intégration Transparente",
+        "DESCRIPTION": "Connectez-vous à vos outils et services préférés"
+      },
+      "SECURITY": {
+        "TITLE": "Sécurité d'Entreprise",
+        "DESCRIPTION": "Vos données sont protégées par des mesures de sécurité de pointe"
+      }
+    },
+    "ABOUT": {
+      "TITLE": "À Propos de Nous",
+      "DESCRIPTION": "AutoFlowOS est une plateforme SaaS de pointe conçue pour aider les entreprises de toutes tailles à automatiser leurs flux de travail et à améliorer leur productivité. Notre mission est de simplifier les processus d'entreprise complexes et de permettre aux équipes de se concentrer sur l'innovation et la croissance."
+    },
+    "CONTACT": {
+      "TITLE": "Contactez-Nous",
+      "NAME": "Nom",
+      "EMAIL": "Email",
+      "SUBJECT": "Sujet",
+      "MESSAGE": "Message",
+      "SUBMIT": "Envoyer",
+      "SUCCESS": "Votre message a été envoyé avec succès!",
+      "ERROR": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+    },
+    "NEWSLETTER": {
+      "TITLE": "Abonnez-vous à notre newsletter",
+      "PLACEHOLDER": "Entrez votre email",
+      "SUBMIT": "S'abonner",
+      "SUCCESS": "Merci de vous être abonné!",
+      "ERROR": "Une erreur s'est produite lors de l'abonnement. Veuillez réessayer."
+    }
+  },
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "Connexion",
+      "EMAIL": "Email",
+      "PASSWORD": "Mot de passe",
+      "SUBMIT": "Se connecter",
+      "FORGOT_PASSWORD": "Mot de passe oublié?",
+      "NO_ACCOUNT": "Vous n'avez pas de compte?",
+      "SIGNUP": "S'inscrire",
+      "ERROR": "Email ou mot de passe invalide"
+    },
+    "SIGNUP": {
+      "TITLE": "Inscription",
+      "NAME": "Nom",
+      "EMAIL": "Email",
+      "PASSWORD": "Mot de passe",
+      "CONFIRM_PASSWORD": "Confirmer le mot de passe",
+      "SUBMIT": "S'inscrire",
+      "HAVE_ACCOUNT": "Vous avez déjà un compte?",
+      "LOGIN": "Se connecter",
+      "ERROR": "Une erreur s'est produite lors de la création de votre compte",
+      "PASSWORD_MISMATCH": "Les mots de passe ne correspondent pas"
+    }
+  },
+  "DASHBOARD": {
+    "WELCOME": "Bienvenue, {{name}}!",
+    "OVERVIEW": "Aperçu",
+    "STATS": {
+      "USERS": "Utilisateurs Totaux",
+      "SUBSCRIPTIONS": "Abonnements Actifs",
+      "REVENUE": "Revenu Mensuel"
+    },
+    "ACTIVITY": {
+      "TITLE": "Activité Récente",
+      "NO_ACTIVITY": "Aucune activité récente"
+    },
+    "SYSTEM_HEALTH": {
+      "TITLE": "État du Système",
+      "STATUS": {
+        "HEALTHY": "En bonne santé",
+        "WARNING": "Avertissement",
+        "CRITICAL": "Critique"
+      }
+    },
+    "SUBSCRIPTION": {
+      "TITLE": "Votre Abonnement",
+      "PLAN": "Plan Actuel",
+      "STATUS": "Statut",
+      "RENEWAL": "Prochain Renouvellement",
+      "UPGRADE": "Mettre à Niveau"
+    }
+  },
+  "ADMIN": {
+    "TITLE": "Tableau de Bord Admin",
+    "USERS": {
+      "TITLE": "Gestion des Utilisateurs",
+      "TOTAL": "Utilisateurs Totaux",
+      "ACTIVE": "Utilisateurs Actifs",
+      "INACTIVE": "Utilisateurs Inactifs"
+    },
+    "SUBSCRIPTIONS": {
+      "TITLE": "Gestion des Abonnements",
+      "TOTAL": "Abonnements Totaux",
+      "ACTIVE": "Abonnements Actifs",
+      "EXPIRED": "Abonnements Expirés"
+    }
+  },
+  "PROFILE": {
+    "TITLE": "Votre Profil",
+    "PERSONAL_INFO": "Informations Personnelles",
+    "NAME": "Nom",
+    "EMAIL": "Email",
+    "UPDATE": "Mettre à Jour le Profil",
+    "PASSWORD": {
+      "TITLE": "Changer le Mot de Passe",
+      "CURRENT": "Mot de Passe Actuel",
+      "NEW": "Nouveau Mot de Passe",
+      "CONFIRM": "Confirmer le Nouveau Mot de Passe",
+      "UPDATE": "Mettre à Jour le Mot de Passe"
+    }
+  },
+  "COMMON": {
+    "LOADING": "Chargement...",
+    "ERROR": "Une erreur s'est produite",
+    "SUCCESS": "Succès!",
+    "SAVE": "Enregistrer",
+    "CANCEL": "Annuler",
+    "DELETE": "Supprimer",
+    "EDIT": "Modifier",
+    "VIEW": "Voir",
+    "SEARCH": "Rechercher",
+    "FILTER": "Filtrer",
+    "SORT": "Trier",
+    "ACTIONS": "Actions",
+    "CONFIRM": "Êtes-vous sûr?",
+    "YES": "Oui",
+    "NO": "Non"
+  },
+  "FOOTER": {
+    "QUICK_LINKS": "Liens Rapides",
+    "ABOUT": "À Propos",
+    "PRICING": "Tarification",
+    "CONTACT": "Contact",
+    "PRIVACY": "Politique de Confidentialité",
+    "CONNECT": "Connecter",
+    "COPYRIGHT": "© {{year}} AutoFlowOS. Tous droits réservés."
+  },
+  "THEME": {
+    "LIGHT": "Mode Clair",
+    "DARK": "Mode Sombre"
+  },
+  "LANGUAGE": {
+    "ENGLISH": "Anglais",
+    "FRENCH": "Français",
+    "GERMAN": "Allemand"
+  }
+}

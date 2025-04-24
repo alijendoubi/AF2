@@ -24,6 +24,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
@@ -41,8 +46,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "800kB",
+                  "maximumError": "1.5MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -50,12 +55,28 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "allowedCommonJsDependencies": [
+                "@grpc/grpc-js",
+                "@grpc/proto-loader",
+                "firebase",
+                "@firebase/app",
+                "@firebase/auth",
+                "@firebase/firestore"
+              ]
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "allowedCommonJsDependencies": [
+                "@grpc/grpc-js",
+                "@grpc/proto-loader",
+                "firebase",
+                "@firebase/app",
+                "@firebase/auth",
+                "@firebase/firestore"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -87,6 +108,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
@@ -97,5 +123,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "63a7dc0e-c34f-4421-8a45-cc57e85e9d39"
   }
 }

@@ -2,15 +2,17 @@ import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AuthService, ThemeService } from '../../services';
+import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterLink, RouterLinkActive, LanguageSwitcherComponent, TranslateModule],
   template: `
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" routerLink="/">AutoFlowOS</a>
+        <a class="navbar-brand" routerLink="/">{{ 'APP.TITLE' | translate }}</a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarNav" aria-controls="navbarNav" 
@@ -22,23 +24,25 @@ import { AuthService, ThemeService } from '../../services';
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a class="nav-link" routerLink="/" routerLinkActive="active" 
-                 [routerLinkActiveOptions]="{exact: true}">Home</a>
+                 [routerLinkActiveOptions]="{exact: true}">{{ 'NAV.HOME' | translate }}</a>
             </li>
             @if (authService.isAuthenticated()) {
               <li class="nav-item">
                 <a class="nav-link" routerLink="/dashboard" 
-                   routerLinkActive="active">Dashboard</a>
+                   routerLinkActive="active">{{ 'NAV.DASHBOARD' | translate }}</a>
               </li>
             }
           </ul>
           
           <div class="d-flex align-items-center">
-            <button class="btn btn-link" (click)="themeService.toggleTheme()">
+            <app-language-switcher class="me-2"></app-language-switcher>
+            
+            <button class="btn btn-link" (click)="themeService.toggleTheme()" title="{{ (themeService.isDarkTheme() ? 'THEME.LIGHT' : 'THEME.DARK') | translate }}">
               <i [class]="themeService.isDarkTheme() ? 'bi bi-sun' : 'bi bi-moon'"></i>
             </button>
             
             @if (authService.isAuthenticated()) {
-              <div class="dropdown">
+              <div class="dropdown ms-2">
                 <button class="btn btn-outline-primary dropdown-toggle" 
                         type="button" id="userDropdown" 
                         data-bs-toggle="dropdown" 
@@ -48,27 +52,27 @@ import { AuthService, ThemeService } from '../../services';
                 <ul class="dropdown-menu dropdown-menu-end" 
                     aria-labelledby="userDropdown">
                   <li>
-                    <a class="dropdown-item" routerLink="/profile">Profile</a>
+                    <a class="dropdown-item" routerLink="/profile">{{ 'NAV.PROFILE' | translate }}</a>
                   </li>
                   @if (authService.isAdminUser()) {
                     <li>
-                      <a class="dropdown-item" routerLink="/admin">Admin Panel</a>
+                      <a class="dropdown-item" routerLink="/admin">{{ 'NAV.ADMIN' | translate }}</a>
                     </li>
                   }
                   <li><hr class="dropdown-divider"></li>
                   <li>
                     <button class="dropdown-item" (click)="logout()">
-                      Logout
+                      {{ 'NAV.LOGOUT' | translate }}
                     </button>
                   </li>
                 </ul>
               </div>
             } @else {
-              <a class="btn btn-outline-primary me-2" routerLink="/login">
-                Login
+              <a class="btn btn-outline-primary ms-2" routerLink="/login">
+                {{ 'NAV.LOGIN' | translate }}
               </a>
-              <a class="btn btn-primary" routerLink="/signup">
-                Sign Up
+              <a class="btn btn-primary ms-2" routerLink="/signup">
+                {{ 'NAV.SIGNUP' | translate }}
               </a>
             }
           </div>
@@ -94,4 +98,3 @@ export class NavbarComponent {
     await this.authService.logout();
   }
 }
-

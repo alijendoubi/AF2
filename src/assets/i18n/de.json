@@ -1,0 +1,178 @@
+{
+  "APP": {
+    "TITLE": "AutoFlowOS",
+    "TAGLINE": "Optimieren Sie Ihren Arbeitsablauf"
+  },
+  "NAV": {
+    "HOME": "Startseite",
+    "DASHBOARD": "Dashboard",
+    "PROFILE": "Profil",
+    "ADMIN": "Admin-Bereich",
+    "LOGIN": "Anmelden",
+    "SIGNUP": "Registrieren",
+    "LOGOUT": "Abmelden"
+  },
+  "HOME": {
+    "HERO": {
+      "TITLE": "Automatisieren Sie Ihren Arbeitsablauf",
+      "SUBTITLE": "Leistungsstarke Tools zur Optimierung Ihrer Geschäftsprozesse",
+      "CTA": "Jetzt starten"
+    },
+    "FEATURES": {
+      "TITLE": "Funktionen",
+      "AUTOMATION": {
+        "TITLE": "Workflow-Automatisierung",
+        "DESCRIPTION": "Automatisieren Sie wiederkehrende Aufgaben und konzentrieren Sie sich auf das Wesentliche"
+      },
+      "ANALYTICS": {
+        "TITLE": "Echtzeit-Analysen",
+        "DESCRIPTION": "Erhalten Sie Einblicke in die Leistung Ihres Unternehmens mit leistungsstarken Dashboards"
+      },
+      "INTEGRATION": {
+        "TITLE": "Nahtlose Integration",
+        "DESCRIPTION": "Verbinden Sie sich mit Ihren bevorzugten Tools und Diensten"
+      },
+      "SECURITY": {
+        "TITLE": "Unternehmenssicherheit",
+        "DESCRIPTION": "Ihre Daten werden durch branchenführende Sicherheitsmaßnahmen geschützt"
+      }
+    },
+    "ABOUT": {
+      "TITLE": "Über Uns",
+      "DESCRIPTION": "AutoFlowOS ist eine hochmoderne SaaS-Plattform, die Unternehmen jeder Größe dabei hilft, ihre Arbeitsabläufe zu automatisieren und die Produktivität zu steigern. Unsere Mission ist es, komplexe Geschäftsprozesse zu vereinfachen und Teams zu befähigen, sich auf Innovation und Wachstum zu konzentrieren."
+    },
+    "CONTACT": {
+      "TITLE": "Kontaktieren Sie Uns",
+      "NAME": "Name",
+      "EMAIL": "E-Mail",
+      "SUBJECT": "Betreff",
+      "MESSAGE": "Nachricht",
+      "SUBMIT": "Absenden",
+      "SUCCESS": "Ihre Nachricht wurde erfolgreich gesendet!",
+      "ERROR": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "NEWSLETTER": {
+      "TITLE": "Abonnieren Sie unseren Newsletter",
+      "PLACEHOLDER": "E-Mail eingeben",
+      "SUBMIT": "Abonnieren",
+      "SUCCESS": "Vielen Dank für Ihr Abonnement!",
+      "ERROR": "Beim Abonnieren ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+    }
+  },
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "Anmelden",
+      "EMAIL": "E-Mail",
+      "PASSWORD": "Passwort",
+      "SUBMIT": "Anmelden",
+      "FORGOT_PASSWORD": "Passwort vergessen?",
+      "NO_ACCOUNT": "Noch kein Konto?",
+      "SIGNUP": "Registrieren",
+      "ERROR": "Ungültige E-Mail oder Passwort"
+    },
+    "SIGNUP": {
+      "TITLE": "Registrieren",
+      "NAME": "Name",
+      "EMAIL": "E-Mail",
+      "PASSWORD": "Passwort",
+      "CONFIRM_PASSWORD": "Passwort bestätigen",
+      "SUBMIT": "Registrieren",
+      "HAVE_ACCOUNT": "Haben Sie bereits ein Konto?",
+      "LOGIN": "Anmelden",
+      "ERROR": "Bei der Erstellung Ihres Kontos ist ein Fehler aufgetreten",
+      "PASSWORD_MISMATCH": "Passwörter stimmen nicht überein"
+    }
+  },
+  "DASHBOARD": {
+    "WELCOME": "Willkommen, {{name}}!",
+    "OVERVIEW": "Übersicht",
+    "STATS": {
+      "USERS": "Gesamtbenutzer",
+      "SUBSCRIPTIONS": "Aktive Abonnements",
+      "REVENUE": "Monatlicher Umsatz"
+    },
+    "ACTIVITY": {
+      "TITLE": "Neueste Aktivitäten",
+      "NO_ACTIVITY": "Keine neueren Aktivitäten"
+    },
+    "SYSTEM_HEALTH": {
+      "TITLE": "Systemzustand",
+      "STATUS": {
+        "HEALTHY": "Gesund",
+        "WARNING": "Warnung",
+        "CRITICAL": "Kritisch"
+      }
+    },
+    "SUBSCRIPTION": {
+      "TITLE": "Ihr Abonnement",
+      "PLAN": "Aktueller Plan",
+      "STATUS": "Status",
+      "RENEWAL": "Nächste Verlängerung",
+      "UPGRADE": "Plan upgraden"
+    }
+  },
+  "ADMIN": {
+    "TITLE": "Admin-Dashboard",
+    "USERS": {
+      "TITLE": "Benutzerverwaltung",
+      "TOTAL": "Gesamtbenutzer",
+      "ACTIVE": "Aktive Benutzer",
+      "INACTIVE": "Inaktive Benutzer"
+    },
+    "SUBSCRIPTIONS": {
+      "TITLE": "Abonnementverwaltung",
+      "TOTAL": "Gesamtabonnements",
+      "ACTIVE": "Aktive Abonnements",
+      "EXPIRED": "Abgelaufene Abonnements"
+    }
+  },
+  "PROFILE": {
+    "TITLE": "Ihr Profil",
+    "PERSONAL_INFO": "Persönliche Informationen",
+    "NAME": "Name",
+    "EMAIL": "E-Mail",
+    "UPDATE": "Profil aktualisieren",
+    "PASSWORD": {
+      "TITLE": "Passwort ändern",
+      "CURRENT": "Aktuelles Passwort",
+      "NEW": "Neues Passwort",
+      "CONFIRM": "Neues Passwort bestätigen",
+      "UPDATE": "Passwort aktualisieren"
+    }
+  },
+  "COMMON": {
+    "LOADING": "Wird geladen...",
+    "ERROR": "Ein Fehler ist aufgetreten",
+    "SUCCESS": "Erfolg!",
+    "SAVE": "Speichern",
+    "CANCEL": "Abbrechen",
+    "DELETE": "Löschen",
+    "EDIT": "Bearbeiten",
+    "VIEW": "Ansehen",
+    "SEARCH": "Suchen",
+    "FILTER": "Filtern",
+    "SORT": "Sortieren",
+    "ACTIONS": "Aktionen",
+    "CONFIRM": "Sind Sie sicher?",
+    "YES": "Ja",
+    "NO": "Nein"
+  },
+  "FOOTER": {
+    "QUICK_LINKS": "Schnelllinks",
+    "ABOUT": "Über uns",
+    "PRICING": "Preise",
+    "CONTACT": "Kontakt",
+    "PRIVACY": "Datenschutzrichtlinie",
+    "CONNECT": "Verbinden",
+    "COPYRIGHT": "© {{year}} AutoFlowOS. Alle Rechte vorbehalten."
+  },
+  "THEME": {
+    "LIGHT": "Heller Modus",
+    "DARK": "Dunkler Modus"
+  },
+  "LANGUAGE": {
+    "ENGLISH": "Englisch",
+    "FRENCH": "Französisch",
+    "GERMAN": "Deutsch"
+  }
+}

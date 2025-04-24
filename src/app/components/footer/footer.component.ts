@@ -1,32 +1,33 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, TranslateModule],
   template: `
     <footer class="footer mt-auto py-4 bg-light">
       <div class="container">
         <div class="row gy-4">
           <div class="col-md-4">
-            <h5>AutoFlowOS</h5>
+            <h5>{{ 'APP.TITLE' | translate }}</h5>
             <p class="text-muted">
-              Streamline your workflow with our powerful automation platform.
+              {{ 'APP.TAGLINE' | translate }}
             </p>
           </div>
           <div class="col-md-4">
-            <h5>Quick Links</h5>
+            <h5>{{ 'FOOTER.QUICK_LINKS' | translate }}</h5>
             <ul class="list-unstyled">
-              <li><a routerLink="/about" class="text-decoration-none">About</a></li>
-              <li><a routerLink="/pricing" class="text-decoration-none">Pricing</a></li>
-              <li><a routerLink="/contact" class="text-decoration-none">Contact</a></li>
-              <li><a routerLink="/privacy" class="text-decoration-none">Privacy Policy</a></li>
+              <li><a routerLink="/about" class="text-decoration-none">{{ 'FOOTER.ABOUT' | translate }}</a></li>
+              <li><a routerLink="/pricing" class="text-decoration-none">{{ 'FOOTER.PRICING' | translate }}</a></li>
+              <li><a routerLink="/contact" class="text-decoration-none">{{ 'FOOTER.CONTACT' | translate }}</a></li>
+              <li><a routerLink="/privacy" class="text-decoration-none">{{ 'FOOTER.PRIVACY' | translate }}</a></li>
             </ul>
           </div>
           <div class="col-md-4">
-            <h5>Connect</h5>
+            <h5>{{ 'FOOTER.CONNECT' | translate }}</h5>
             <ul class="list-unstyled">
               <li>
                 <a href="https://twitter.com/autoflowos" 
@@ -57,7 +58,7 @@ import { CommonModule } from '@angular/common';
         </div>
         <hr>
         <div class="text-center">
-          <p class="mb-0">© {{ currentYear }} AutoFlowOS. All rights reserved.</p>
+          <p class="mb-0">{{ 'FOOTER.COPYRIGHT' | translate: { year: currentYear } }}</p>
         </div>
       </div>
     </footer>
@@ -83,4 +84,3 @@ import { CommonModule } from '@angular/common';
 export class FooterComponent {
   protected currentYear = new Date().getFullYear();
 }
-

@@ -1,1 +1,109 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Global Styles */
+:root {
+  --bs-primary-rgb: 0, 123, 255;
+  --bs-primary: #007bff;
+  --bs-secondary: #6c757d;
+  --bs-success: #28a745;
+  --bs-info: #17a2b8;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #343a40;
+  --bs-body-font-family: 'Inter', sans-serif;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
+  --bs-border-color: #dee2e6;
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --bs-body-color: #f8f9fa;
+  --bs-body-bg: #212529;
+  --bs-border-color: #495057;
+}
+
+body.dark-mode .card {
+  background-color: #2c3034;
+  border-color: #495057;
+}
+
+body.dark-mode .bg-light {
+  background-color: #2c3034 !important;
+}
+
+body.dark-mode .text-muted {
+  color: #adb5bd !important;
+}
+
+body.dark-mode .navbar-light {
+  background-color: #2c3034 !important;
+}
+
+body.dark-mode .navbar-light .navbar-brand,
+body.dark-mode .navbar-light .nav-link {
+  color: #f8f9fa;
+}
+
+body.dark-mode .footer {
+  background-color: #2c3034 !important;
+  color: #f8f9fa;
+}
+
+/* Common Styles */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
+
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+/* Animation Styles */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1.display-4 {
+    font-size: 2.5rem;
+  }
+  
+  h1.display-5 {
+    font-size: 2rem;
+  }
+}

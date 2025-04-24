@@ -1,0 +1,320 @@
+<div class="container py-5">
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto text-center">
+      <h1 class="display-4 fw-bold mb-4">{{ 'PRICING.TITLE' | translate }}</h1>
+      <p class="lead mb-4">{{ 'PRICING.SUBTITLE' | translate }}</p>
+    </div>
+  </div>
+  
+  <!-- Pricing Toggle -->
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto text-center">
+      <div class="d-flex align-items-center justify-content-center">
+        <span class="me-3 fw-bold">{{ 'PRICING.MONTHLY' | translate }}</span>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="pricingToggle" [(ngModel)]="isAnnual">
+          <label class="form-check-label" for="pricingToggle"></label>
+        </div>
+        <span class="ms-3 fw-bold">{{ 'PRICING.ANNUAL' | translate }}</span>
+        <span class="badge bg-danger ms-2">{{ 'PRICING.SAVE' | translate }}</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Pricing Cards -->
+  <div class="row row-cols-1 row-cols-md-3 mb-5 g-4">
+    <!-- Free Plan -->
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body p-4 p-md-5">
+          <h5 class="card-title text-center mb-4">{{ 'PRICING.FREE.TITLE' | translate }}</h5>
+          <div class="text-center mb-4">
+            <span class="display-4 fw-bold">$0</span>
+            <span class="text-muted">/{{ isAnnual ? 'year' : 'month' }}</span>
+          </div>
+          
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.FREE.FEATURE1' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.FREE.FEATURE2' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.FREE.FEATURE3' | translate }}
+            </li>
+            <li class="mb-2 text-muted">
+              <i class="bi bi-x-circle-fill text-muted me-2"></i>
+              {{ 'PRICING.FREE.FEATURE4' | translate }}
+            </li>
+            <li class="mb-2 text-muted">
+              <i class="bi bi-x-circle-fill text-muted me-2"></i>
+              {{ 'PRICING.FREE.FEATURE5' | translate }}
+            </li>
+          </ul>
+          
+          <div class="d-grid">
+            <a routerLink="/signup" class="btn btn-outline-primary">{{ 'PRICING.FREE.CTA' | translate }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Pro Plan -->
+    <div class="col">
+      <div class="card h-100 border-0 shadow position-relative">
+        <div class="card-body p-4 p-md-5">
+          <div class="ribbon ribbon-top-right"><span>{{ 'PRICING.POPULAR' | translate }}</span></div>
+          <h5 class="card-title text-center mb-4">{{ 'PRICING.PRO.TITLE' | translate }}</h5>
+          <div class="text-center mb-4">
+            <span class="display-4 fw-bold">${{ isAnnual ? '29' : '39' }}</span>
+            <span class="text-muted">/{{ isAnnual ? 'year' : 'month' }}</span>
+          </div>
+          
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.PRO.FEATURE1' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.PRO.FEATURE2' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.PRO.FEATURE3' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.PRO.FEATURE4' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.PRO.FEATURE5' | translate }}
+            </li>
+          </ul>
+          
+          <div class="d-grid">
+            <a routerLink="/signup" class="btn btn-primary">{{ 'PRICING.PRO.CTA' | translate }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Enterprise Plan -->
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body p-4 p-md-5">
+          <h5 class="card-title text-center mb-4">{{ 'PRICING.ENTERPRISE.TITLE' | translate }}</h5>
+          <div class="text-center mb-4">
+            <span class="display-4 fw-bold">${{ isAnnual ? '99' : '129' }}</span>
+            <span class="text-muted">/{{ isAnnual ? 'year' : 'month' }}</span>
+          </div>
+          
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.ENTERPRISE.FEATURE1' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.ENTERPRISE.FEATURE2' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.ENTERPRISE.FEATURE3' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.ENTERPRISE.FEATURE4' | translate }}
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              {{ 'PRICING.ENTERPRISE.FEATURE5' | translate }}
+            </li>
+          </ul>
+          
+          <div class="d-grid">
+            <a routerLink="/contact" class="btn btn-outline-primary">{{ 'PRICING.ENTERPRISE.CTA' | translate }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Feature Comparison -->
+  <div class="row mb-5">
+    <div class="col-12">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="text-center mb-4">{{ 'PRICING.COMPARISON.TITLE' | translate }}</h2>
+          
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">{{ 'PRICING.COMPARISON.FEATURE' | translate }}</th>
+                  <th scope="col" class="text-center">{{ 'PRICING.FREE.TITLE' | translate }}</th>
+                  <th scope="col" class="text-center">{{ 'PRICING.PRO.TITLE' | translate }}</th>
+                  <th scope="col" class="text-center">{{ 'PRICING.ENTERPRISE.TITLE' | translate }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ 'PRICING.COMPARISON.USERS' | translate }}</td>
+                  <td class="text-center">1</td>
+                  <td class="text-center">5</td>
+                  <td class="text-center">{{ 'PRICING.COMPARISON.UNLIMITED' | translate }}</td>
+                </tr>
+                <tr>
+                  <td>{{ 'PRICING.COMPARISON.STORAGE' | translate }}</td>
+                  <td class="text-center">1 GB</td>
+                  <td class="text-center">10 GB</td>
+                  <td class="text-center">100 GB</td>
+                </tr>
+                <tr>
+                  <td>{{ 'PRICING.COMPARISON.PROJECTS' | translate }}</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center">10</td>
+                  <td class="text-center">{{ 'PRICING.COMPARISON.UNLIMITED' | translate }}</td>
+                </tr>
+                <tr>
+                  <td>{{ 'PRICING.COMPARISON.API_CALLS' | translate }}</td>
+                  <td class="text-center">1,000/day</td>
+                  <td class="text-center">10,000/day</td>
+                  <td class="text-center">{{ 'PRICING.COMPARISON.UNLIMITED' | translate }}</td>
+                </tr>
+                <tr>
+                  <td>{{ 'PRICING.COMPARISON.SUPPORT' | translate }}</td>
+                  <td class="text-center">
+                    <i class="bi bi-x-circle-fill text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{ 'PRICING.COMPARISON.PRIORITY_SUPPORT' | translate }}</td>
+                  <td class="text-center">
+                    <i class="bi bi-x-circle-fill text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="bi bi-x-circle-fill text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{ 'PRICING.COMPARISON.CUSTOM_DOMAIN' | translate }}</td>
+                  <td class="text-center">
+                    <i class="bi bi-x-circle-fill text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="bi bi-check-circle-fill text-success"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>{{ 'PRICING.COMPARISON.ANALYTICS' | translate }}</td>
+                  <td class="text-center">{{ 'PRICING.COMPARISON.BASIC' | translate }}</td>
+                  <td class="text-center">{{ 'PRICING.COMPARISON.ADVANCED' | translate }}</td>
+                  <td class="text-center">{{ 'PRICING.COMPARISON.CUSTOM' | translate }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- FAQ Section -->
+  <div class="row mb-5">
+    <div class="col-12">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="text-center mb-4">{{ 'PRICING.FAQ.TITLE' | translate }}</h2>
+          
+          <div class="accordion" id="pricingFaq">
+            <div class="accordion-item border-0 mb-3">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  {{ 'PRICING.FAQ.Q1' | translate }}
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#pricingFaq">
+                <div class="accordion-body">
+                  {{ 'PRICING.FAQ.A1' | translate }}
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  {{ 'PRICING.FAQ.Q2' | translate }}
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#pricingFaq">
+                <div class="accordion-body">
+                  {{ 'PRICING.FAQ.A2' | translate }}
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0 mb-3">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  {{ 'PRICING.FAQ.Q3' | translate }}
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#pricingFaq">
+                <div class="accordion-body">
+                  {{ 'PRICING.FAQ.A3' | translate }}
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  {{ 'PRICING.FAQ.Q4' | translate }}
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#pricingFaq">
+                <div class="accordion-body">
+                  {{ 'PRICING.FAQ.A4' | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- CTA Section -->
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+      <div class="card border-0 bg-primary text-white shadow-lg">
+        <div class="card-body p-5 text-center">
+          <h2 class="fw-bold mb-3">{{ 'PRICING.CTA.TITLE' | translate }}</h2>
+          <p class="lead mb-4">{{ 'PRICING.CTA.SUBTITLE' | translate }}</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <a routerLink="/signup" class="btn btn-light btn-lg px-4 me-md-2">{{ 'PRICING.CTA.SIGNUP' | translate }}</a>
+            <a routerLink="/contact" class="btn btn-outline-light btn-lg px-4">{{ 'PRICING.CTA.CONTACT' | translate }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,10 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { Auth, User as FirebaseUser, UserCredential, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
-import { Firestore, doc, setDoc, getDoc } from '@angular/fire/firestore';
+import { Firestore, doc, setDoc } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, from, map, switchMap, tap } from 'rxjs';
 import { User, UserRole } from '../interfaces';
+import { getDocumentById, observeAuthState } from '../firebase/firebase-optimizations';
 
 @Injectable({
   providedIn: 'root'
@@ -20,12 +21,15 @@ export class AuthService {
   public isAdmin = signal<boolean>(false);
 
   constructor() {
-    this.auth.onAuthStateChanged(async (firebaseUser) => {
+    // Use optimized auth state observer
+    observeAuthState().subscribe(async (firebaseUser) => {
       if (firebaseUser) {
-        const user = await this.getUserData(firebaseUser.uid);
-        this.userSubject.next(user);
-        this.isAuthenticated.set(true);
-        this.isAdmin.set(user?.role === UserRole.ADMIN);
+        // Use optimized document fetching
+        getDocumentById<User>('users', firebaseUser.uid).subscribe(user => {
+          this.userSubject.next(user);
+          this.isAuthenticated.set(!!user);
+          this.isAdmin.set(user?.role === UserRole.ADMIN);
+        });
       } else {
         this.userSubject.next(null);
         this.isAuthenticated.set(false);
@@ -76,14 +80,9 @@ export class AuthService {
     }
   }
 
-  private async getUserData(uid: string): Promise<User | null> {
-    try {
-      const userDoc = await getDoc(doc(this.firestore, 'users', uid));
-      return userDoc.exists() ? userDoc.data() as User : null;
-    } catch (error) {
-      console.error('Get user data error:', error);
-      return null;
-    }
+  // Using the optimized function from firebase-optimizations.ts instead
+  private getUserData(uid: string): Observable<User | null> {
+    return getDocumentById<User>('users', uid);
   }
 
   private async setUserData(user: User): Promise<void> {
@@ -118,4 +117,3 @@ export class AuthService {
     return this.userSubject.value;
   }
 }
-
