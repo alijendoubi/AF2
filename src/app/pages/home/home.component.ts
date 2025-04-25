@@ -394,6 +394,7 @@ declare var bootstrap: any;
     }
     
     /* Section styles */
+    /* Section styles */
     section {
       position: relative;
       z-index: 1;
@@ -404,8 +405,9 @@ declare var bootstrap: any;
     /* Hero section */
     .hero {
       background: linear-gradient(135deg, var(--bs-primary) 0%, #6f42c1 100%);
+      padding-top: 0;
+      margin-top: 0;
     }
-    
     .hero-bg-pattern {
       width: 100%;
       height: 100%;
@@ -775,15 +777,16 @@ declare var bootstrap: any;
     }
 
     /* Responsive styles */
+    /* Responsive styles */
     @media (max-width: 768px) {
       section {
         padding: 4rem 0;
       }
       
       section.hero {
-        padding: 6rem 0;
+        padding: 6rem 0 6rem 0;
+        padding-top: 0;
       }
-      
       .hero {
         h1 {
           font-size: calc(2rem + 1.5vw);

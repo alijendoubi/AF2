@@ -10,6 +10,10 @@
     "ADMIN": "Panneau d'Administration",
     "LOGIN": "Connexion",
     "SIGNUP": "S'inscrire",
+    "ABOUTUS": "À Propos de Nous",
+    "MISSION": "Notre Mission",
+    "CONTACTUS": "Contactez-Nous",
+    "FEATURES": "Fonctionnalités",
     "LOGOUT": "Déconnexion"
   },
   "HOME": {

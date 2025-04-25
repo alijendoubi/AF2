@@ -3,6 +3,19 @@
     "TITLE": "AutoFlowOS",
     "TAGLINE": "Streamline Your Workflow"
   },
+  "NAV": {
+    "HOME": "Home",
+    "ABOUTUS": "About Us",
+    "MISSION": "Our Mission",
+    "CONTACTUS": "Contact Us",
+    "FEATURES": "Features",
+    "DASHBOARD": "Dashboard",
+    "PROFILE": "Profile",
+    "ADMIN": "Admin Panel",
+    "LOGIN": "Login",
+    "SIGNUP": "Sign Up",
+    "LOGOUT": "Logout"
+  },
   "HOME": {
     "HERO": {
       "TITLE": "Automate Your Workflow with AutoFlowOS",
@@ -80,6 +93,104 @@
       "CLOSE": "Close"
     }
   },
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "Login",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "SUBMIT": "Login",
+      "FORGOT_PASSWORD": "Forgot Password?",
+      "NO_ACCOUNT": "Don't have an account?",
+      "SIGNUP": "Sign Up",
+      "ERROR": "Invalid email or password"
+    },
+    "SIGNUP": {
+      "TITLE": "Sign Up",
+      "NAME": "Name",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "CONFIRM_PASSWORD": "Confirm Password",
+      "SUBMIT": "Sign Up",
+      "HAVE_ACCOUNT": "Already have an account?",
+      "LOGIN": "Login",
+      "ERROR": "An error occurred while creating your account",
+      "PASSWORD_MISMATCH": "Passwords do not match"
+    }
+  },
+  "DASHBOARD": {
+    "WELCOME": "Welcome, {{name}}!",
+    "OVERVIEW": "Overview",
+    "STATS": {
+      "USERS": "Total Users",
+      "SUBSCRIPTIONS": "Active Subscriptions",
+      "REVENUE": "Monthly Revenue"
+    },
+    "ACTIVITY": {
+      "TITLE": "Recent Activity",
+      "NO_ACTIVITY": "No recent activity"
+    },
+    "SYSTEM_HEALTH": {
+      "TITLE": "System Health",
+      "STATUS": {
+        "HEALTHY": "Healthy",
+        "WARNING": "Warning",
+        "CRITICAL": "Critical"
+      }
+    },
+    "SUBSCRIPTION": {
+      "TITLE": "Your Subscription",
+      "PLAN": "Current Plan",
+      "STATUS": "Status",
+      "RENEWAL": "Next Renewal",
+      "UPGRADE": "Upgrade Plan"
+    }
+  },
+  "ADMIN": {
+    "TITLE": "Admin Dashboard",
+    "USERS": {
+      "TITLE": "User Management",
+      "TOTAL": "Total Users",
+      "ACTIVE": "Active Users",
+      "INACTIVE": "Inactive Users"
+    },
+    "SUBSCRIPTIONS": {
+      "TITLE": "Subscription Management",
+      "TOTAL": "Total Subscriptions",
+      "ACTIVE": "Active Subscriptions",
+      "EXPIRED": "Expired Subscriptions"
+    }
+  },
+  "PROFILE": {
+    "TITLE": "Your Profile",
+    "PERSONAL_INFO": "Personal Information",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "UPDATE": "Update Profile",
+    "PASSWORD": {
+      "TITLE": "Change Password",
+      "CURRENT": "Current Password",
+      "NEW": "New Password",
+      "CONFIRM": "Confirm New Password",
+      "UPDATE": "Update Password"
+    }
+  },
+  "COMMON": {
+    "LOADING": "Loading...",
+    "ERROR": "An error occurred",
+    "SUCCESS": "Success!",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "DELETE": "Delete",
+    "EDIT": "Edit",
+    "VIEW": "View",
+    "SEARCH": "Search",
+    "FILTER": "Filter",
+    "SORT": "Sort",
+    "ACTIONS": "Actions",
+    "CONFIRM": "Are you sure?",
+    "YES": "Yes",
+    "NO": "No"
+  },
   "FOOTER": {
     "DESCRIPTION": "AutoFlowOS - Making workflow automation accessible to everyone.",
     "COMPANY": "Company",
@@ -102,20 +213,18 @@
     "DASHBOARD": "Dashboard",
     "RIGHTS": "All rights reserved."
   },
-  "VALIDATION": {
-    "REQUIRED": "This field is required",
-    "EMAIL": "Please enter a valid email address",
-    "VALID_EMAIL": "Please enter a valid email address"
+  "THEME": {
+    "LIGHT": "Light Mode",
+    "DARK": "Dark Mode"
   },
   "LANGUAGE": {
     "ENGLISH": "English",
     "FRENCH": "French",
     "GERMAN": "German"
   },
-  "NAV": {
-    "HOME": "Home",
-    "DASHBOARD": "Dashboard",
-    "SIGNUP": "Sign Up",
-    "LOGIN": "Login"
+  "VALIDATION": {
+    "REQUIRED": "This field is required",
+    "EMAIL": "Please enter a valid email address",
+    "VALID_EMAIL": "Please enter a valid email address"
   }
 }
