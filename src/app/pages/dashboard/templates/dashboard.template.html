@@ -1,10 +1,45 @@
 <div class="container-fluid py-4">
-  <h1 class="mb-4">{{ 'DASHBOARD.WELCOME' | translate: { name: userName } }}</h1>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="mb-0">{{ 'DASHBOARD.WELCOME' | translate: { name: userName } }}</h1>
+    <button class="btn btn-outline-primary" (click)="refreshDashboard()" [disabled]="isLoading">
+      <i class="bi bi-arrow-clockwise me-2"></i>
+      {{ 'DASHBOARD.REFRESH' | translate }}
+    </button>
+  </div>
   
   <!-- Loading State -->
   <div *ngIf="isLoading" class="d-flex justify-content-center my-5">
     <div class="spinner-border text-primary" role="status">
       <span class="visually-hidden">{{ 'COMMON.LOADING' | translate }}</span>
+    </div>
+  </div>
+  
+  <!-- Quick Actions Section -->
+  <div *ngIf="!isLoading" class="row mb-4">
+    <div class="col-12">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title mb-3">{{ 'DASHBOARD.QUICK_ACTIONS.TITLE' | translate }}</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-primary">
+              <i class="bi bi-plus-circle me-2"></i>
+              {{ 'DASHBOARD.QUICK_ACTIONS.NEW_WORKFLOW' | translate }}
+            </button>
+            <button class="btn btn-outline-primary">
+              <i class="bi bi-gear me-2"></i>
+              {{ 'DASHBOARD.QUICK_ACTIONS.SETTINGS' | translate }}
+            </button>
+            <button class="btn btn-outline-primary">
+              <i class="bi bi-question-circle me-2"></i>
+              {{ 'DASHBOARD.QUICK_ACTIONS.HELP' | translate }}
+            </button>
+            <button class="btn btn-outline-primary">
+              <i class="bi bi-person me-2"></i>
+              {{ 'DASHBOARD.QUICK_ACTIONS.PROFILE' | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   
@@ -109,6 +144,69 @@
           </div>
         </div>
       </div>
+      
+      <!-- Usage Statistics -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-muted mb-0">{{ 'DASHBOARD.USAGE.TITLE' | translate }}</h5>
+            <div class="mt-3">
+              <!-- Storage Usage -->
+              <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span>{{ 'DASHBOARD.USAGE.STORAGE' | translate }}</span>
+                  <span class="fw-bold">{{ userData?.usage?.storage?.used || 0 }}/{{ userData?.usage?.storage?.total || 10 }} {{ userData?.usage?.storage?.unit || 'GB' }}</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-primary" role="progressbar" 
+                       [style.width]="((userData?.usage?.storage?.used || 0) / (userData?.usage?.storage?.total || 10) * 100) + '%'" 
+                       aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              
+              <!-- API Calls Usage -->
+              <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span>{{ 'DASHBOARD.USAGE.API_CALLS' | translate }}</span>
+                  <span class="fw-bold">{{ userData?.usage?.apiCalls?.used || 0 }}/{{ userData?.usage?.apiCalls?.total || 10000 }} {{ userData?.usage?.apiCalls?.unit || 'calls' }}</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-success" role="progressbar" 
+                       [style.width]="((userData?.usage?.apiCalls?.used || 0) / (userData?.usage?.apiCalls?.total || 10000) * 100) + '%'" 
+                       aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Recent Projects -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title text-muted mb-0">{{ 'DASHBOARD.RECENT_PROJECTS.TITLE' | translate }}</h5>
+            <div class="mt-3">
+              <div *ngIf="userData?.recentProjects?.length === 0" class="text-center py-3">
+                <p class="mb-0">{{ 'DASHBOARD.RECENT_PROJECTS.NO_PROJECTS' | translate }}</p>
+              </div>
+              <ul *ngIf="userData?.recentProjects?.length > 0" class="list-group list-group-flush">
+                <li *ngFor="let project of userData?.recentProjects" class="list-group-item px-0 py-2 border-0">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-medium">{{ project.name }}</span>
+                    <small class="text-muted">{{ project.lastAccessed | date:'shortDate' }}</small>
+                  </div>
+                </li>
+              </ul>
+              <div class="mt-3">
+                <button class="btn btn-outline-primary btn-sm">
+                  {{ 'DASHBOARD.RECENT_PROJECTS.VIEW_ALL' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </ng-container>
   
@@ -116,30 +214,73 @@
   <div *ngIf="!isLoading" class="row mt-4">
     <div class="col-12">
       <div class="card border-0 shadow-sm">
-        <div class="card-header bg-white border-0">
+        <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
           <h5 class="card-title mb-0">{{ 'DASHBOARD.ACTIVITY.TITLE' | translate }}</h5>
+          <div class="d-flex gap-2">
+            <select class="form-select form-select-sm" [(ngModel)]="activityFilter" (change)="filterActivityLogs()">
+              <option value="all">{{ 'DASHBOARD.ACTIVITY.FILTER.ALL' | translate }}</option>
+              <option value="login">{{ 'DASHBOARD.ACTIVITY.FILTER.LOGIN' | translate }}</option>
+              <option value="subscription">{{ 'DASHBOARD.ACTIVITY.FILTER.SUBSCRIPTION' | translate }}</option>
+              <option value="profile">{{ 'DASHBOARD.ACTIVITY.FILTER.PROFILE' | translate }}</option>
+              <option value="system">{{ 'DASHBOARD.ACTIVITY.FILTER.SYSTEM' | translate }}</option>
+            </select>
+            <button class="btn btn-sm btn-outline-secondary" (click)="clearActivityLogs()">
+              <i class="bi bi-trash me-1"></i>
+              {{ 'DASHBOARD.ACTIVITY.CLEAR' | translate }}
+            </button>
+          </div>
         </div>
         <div class="card-body">
-          <div *ngIf="activityLogs.length === 0" class="text-center py-4">
+          <div *ngIf="filteredActivityLogs.length === 0" class="text-center py-4">
             <p class="mb-0">{{ 'DASHBOARD.ACTIVITY.NO_ACTIVITY' | translate }}</p>
           </div>
-          <div *ngIf="activityLogs.length > 0" class="table-responsive">
+          <div *ngIf="filteredActivityLogs.length > 0" class="table-responsive">
             <table class="table table-hover">
               <thead>
                 <tr>
-                  <th>Action</th>
-                  <th>Details</th>
-                  <th>Time</th>
+                  <th style="width: 20%">{{ 'DASHBOARD.ACTIVITY.ACTION' | translate }}</th>
+                  <th style="width: 55%">{{ 'DASHBOARD.ACTIVITY.DETAILS' | translate }}</th>
+                  <th style="width: 25%">{{ 'DASHBOARD.ACTIVITY.TIME' | translate }}</th>
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let log of activityLogs">
-                  <td>{{ log.action }}</td>
+                <tr *ngFor="let log of filteredActivityLogs" class="activity-log-row">
+                  <td>
+                    <span class="badge" [ngClass]="{
+                      'bg-primary': log.action === 'Login',
+                      'bg-success': log.action === 'Subscription Updated',
+                      'bg-info': log.action === 'Profile Updated',
+                      'bg-warning': log.action === 'Password Changed',
+                      'bg-secondary': log.action === 'System Update'
+                    }">{{ log.action }}</span>
+                  </td>
                   <td>{{ log.details }}</td>
                   <td>{{ log.timestamp | date:'medium' }}</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          
+          <div *ngIf="filteredActivityLogs.length > 5" class="d-flex justify-content-center mt-3">
+            <nav aria-label="Activity log pagination">
+              <ul class="pagination pagination-sm">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item active" aria-current="page">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

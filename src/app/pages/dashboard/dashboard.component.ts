@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, PLATFORM_ID, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 import { AuthService, DashboardService } from '../../services';
 import { DashboardStats, ActivityLog, SystemHealth } from '../../interfaces';
 import { isPlatformBrowser } from '@angular/common';
@@ -8,7 +9,7 @@ import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, FormsModule],
   templateUrl: './templates/dashboard.template.html',
   styles: [`
     :host {
@@ -35,6 +36,8 @@ export class DashboardComponent implements OnInit {
   // Dashboard data
   protected stats: DashboardStats | null = null;
   protected activityLogs: ActivityLog[] = [];
+  protected filteredActivityLogs: ActivityLog[] = [];
+  protected activityFilter: string = 'all';
   protected systemHealth: SystemHealth | null = null;
   protected userData: any = null;
   protected adminData: any = null;
@@ -72,6 +75,49 @@ export class DashboardComponent implements OnInit {
     }
   }
   
+  /**
+   * Refresh dashboard data
+   * This method is called when the user clicks the refresh button
+   */
+  protected refreshDashboard(): void {
+    this.loadDashboardData();
+  }
+
+  /**
+   * Filter activity logs based on selected filter
+   */
+  protected filterActivityLogs(): void {
+    if (this.activityFilter === 'all') {
+      this.filteredActivityLogs = [...this.activityLogs];
+    } else {
+      this.filteredActivityLogs = this.activityLogs.filter(log => {
+        const action = log.action.toLowerCase();
+        switch (this.activityFilter) {
+          case 'login':
+            return action.includes('login');
+          case 'subscription':
+            return action.includes('subscription');
+          case 'profile':
+            return action.includes('profile') || action.includes('password');
+          case 'system':
+            return action.includes('system');
+          default:
+            return true;
+        }
+      });
+    }
+  }
+  
+  /**
+   * Clear all activity logs
+   */
+  protected clearActivityLogs(): void {
+    // In a real application, this would call a service method to clear logs
+    // For now, we'll just clear the local arrays
+    this.activityLogs = [];
+    this.filteredActivityLogs = [];
+  }
+
   private async loadDashboardData(): Promise<void> {
     this.isLoading = true;
     
@@ -83,6 +129,8 @@ export class DashboardComponent implements OnInit {
       
       this.dashboardService.getActivityLogs().subscribe(logs => {
         this.activityLogs = logs;
+        // Initialize filtered logs with all logs
+        this.filteredActivityLogs = [...logs];
       });
       
       // Load role-specific data

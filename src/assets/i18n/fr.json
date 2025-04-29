@@ -113,20 +113,49 @@
       "HAVE_ACCOUNT": "Vous avez déjà un compte?",
       "LOGIN": "Se connecter",
       "ERROR": "Une erreur s'est produite lors de la création de votre compte",
-      "PASSWORD_MISMATCH": "Les mots de passe ne correspondent pas"
+      "PASSWORD_MISMATCH": "Les mots de passe ne correspondent pas",
+      "VERIFICATION_SENT": "Compte créé avec succès! Veuillez vérifier votre email pour valider votre compte."
+    },
+    "FORGOT_PASSWORD": {
+      "TITLE": "Mot de Passe Oublié",
+      "EMAIL": "Email",
+      "SUBMIT": "Réinitialiser le Mot de Passe",
+      "REMEMBER_PASSWORD": "Vous vous souvenez de votre mot de passe?",
+      "LOGIN": "Se connecter",
+      "SUCCESS": "Email de réinitialisation envoyé. Veuillez vérifier votre boîte de réception.",
+      "ERROR": "Une erreur s'est produite lors de l'envoi de l'email de réinitialisation."
     }
   },
   "DASHBOARD": {
     "WELCOME": "Bienvenue, {{name}}!",
     "OVERVIEW": "Aperçu",
+    "REFRESH": "Actualiser",
     "STATS": {
       "USERS": "Utilisateurs Totaux",
       "SUBSCRIPTIONS": "Abonnements Actifs",
       "REVENUE": "Revenu Mensuel"
     },
+    "QUICK_ACTIONS": {
+      "TITLE": "Actions Rapides",
+      "NEW_WORKFLOW": "Nouveau Flux",
+      "SETTINGS": "Paramètres",
+      "HELP": "Aide",
+      "PROFILE": "Profil"
+    },
     "ACTIVITY": {
       "TITLE": "Activité Récente",
-      "NO_ACTIVITY": "Aucune activité récente"
+      "NO_ACTIVITY": "Aucune activité récente",
+      "ACTION": "Action",
+      "DETAILS": "Détails",
+      "TIME": "Heure",
+      "CLEAR": "Tout Effacer",
+      "FILTER": {
+        "ALL": "Toutes les Activités",
+        "LOGIN": "Activités de Connexion",
+        "SUBSCRIPTION": "Activités d'Abonnement",
+        "PROFILE": "Activités de Profil",
+        "SYSTEM": "Activités Système"
+      }
     },
     "SYSTEM_HEALTH": {
       "TITLE": "État du Système",
@@ -142,6 +171,16 @@
       "STATUS": "Statut",
       "RENEWAL": "Prochain Renouvellement",
       "UPGRADE": "Mettre à Niveau"
+    },
+    "USAGE": {
+      "TITLE": "Statistiques d'Utilisation",
+      "STORAGE": "Stockage",
+      "API_CALLS": "Appels API"
+    },
+    "RECENT_PROJECTS": {
+      "TITLE": "Projets Récents",
+      "NO_PROJECTS": "Aucun projet récent",
+      "VIEW_ALL": "Voir Tous les Projets"
     }
   },
   "ADMIN": {
@@ -188,7 +227,8 @@
     "ACTIONS": "Actions",
     "CONFIRM": "Êtes-vous sûr?",
     "YES": "Oui",
-    "NO": "Non"
+    "NO": "Non",
+    "DETAILS": "Détails"
   },
   "FOOTER": {
     "DESCRIPTION": "AutoFlowOS - Rendre l'automatisation des flux de travail accessible à tous.",
@@ -225,5 +265,75 @@
     "REQUIRED": "Ce champ est obligatoire",
     "EMAIL": "Veuillez saisir une adresse email valide",
     "VALID_EMAIL": "Veuillez saisir une adresse email valide"
+  },
+  "CONTACT": {
+    "TITLE": "Contactez-Nous",
+    "SUBTITLE": "Vous avez des questions ou des commentaires? Nous serions ravis de vous entendre. Contactez notre équipe.",
+    "FORM": {
+      "TITLE": "Envoyez-Nous un Message",
+      "NAME": "Nom",
+      "NAME_REQUIRED": "Le nom est requis",
+      "EMAIL": "Email",
+      "EMAIL_REQUIRED": "L'email est requis",
+      "EMAIL_INVALID": "Veuillez saisir une adresse email valide",
+      "SUBJECT": "Sujet",
+      "SUBJECT_REQUIRED": "Le sujet est requis",
+      "MESSAGE": "Message",
+      "MESSAGE_REQUIRED": "Le message est requis",
+      "SUBMIT": "Envoyer le Message",
+      "SUCCESS": "Merci! Votre message a été envoyé avec succès.",
+      "ERROR": "Oups! Une erreur s'est produite. Veuillez réessayer."
+    },
+    "INFO": {
+      "TITLE": "Informations de Contact",
+      "ADDRESS": {
+        "TITLE": "Notre Adresse"
+      },
+      "EMAIL": {
+        "TITLE": "Contactez-Nous par Email"
+      },
+      "PHONE": {
+        "TITLE": "Appelez-Nous"
+      }
+    },
+    "HOURS": {
+      "TITLE": "Heures d'Ouverture",
+      "MONDAY_FRIDAY": "Lundi - Vendredi",
+      "SATURDAY": "Samedi",
+      "SUNDAY": "Dimanche",
+      "CLOSED": "Fermé"
+    },
+    "SOCIAL": {
+      "TITLE": "Suivez-Nous"
+    }
+  },
+  "ABOUT": {
+    "TITLE": "À Propos de Nous",
+    "SUBTITLE": "Découvrez notre histoire, notre mission et l'équipe derrière AutoFlowOS",
+    "STORY": {
+      "TITLE": "Notre Histoire",
+      "PARAGRAPH1": "AutoFlowOS a débuté en 2020 avec une idée simple: rendre l'automatisation des flux de travail accessible à tous, pas seulement aux experts techniques.",
+      "PARAGRAPH2": "Ce qui a commencé comme un projet passionné entre un petit groupe d'ingénieurs s'est transformé en une plateforme complète, reconnue par des entreprises du monde entier.",
+      "PARAGRAPH3": "Aujourd'hui, notre équipe continue d'innover et de construire des solutions qui aident les organisations à simplifier leurs opérations et à se concentrer sur l'essentiel."
+    },
+    "MISSION": {
+      "TITLE": "Notre Mission",
+      "PARAGRAPH1": "Nous croyons qu'en automatisant les tâches routinières, nous pouvons libérer le potentiel humain pour un travail plus créatif et significatif.",
+      "PARAGRAPH2": "Notre mission est de fournir des outils puissants mais intuitifs qui aident les entreprises de toutes tailles à transformer leurs flux de travail et à augmenter leur productivité.",
+      "INNOVATION": "L'Innovation d'Abord",
+      "INNOVATION_TEXT": "Nous repoussons constamment les limites de ce qui est possible en matière d'automatisation des flux de travail.",
+      "COMMUNITY": "Orienté Communauté",
+      "COMMUNITY_TEXT": "Nous développons notre plateforme avec les commentaires des utilisateurs pour nous assurer qu'elle résout des problèmes concrets."
+    },
+    "TEAM": {
+      "TITLE": "Rencontrez Notre Équipe",
+      "SUBTITLE": "Les personnes passionnées derrière AutoFlowOS"
+    },
+    "CTA": {
+      "TITLE": "Prêt à Transformer Votre Flux de Travail?",
+      "SUBTITLE": "Rejoignez des milliers d'entreprises qui utilisent déjà AutoFlowOS pour optimiser leurs opérations.",
+      "CONTACT": "Contactez-Nous",
+      "SIGNUP": "Commencer"
+    }
   }
 }

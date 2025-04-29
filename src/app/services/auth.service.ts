@@ -1,5 +1,5 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { Auth, User as FirebaseUser, UserCredential, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
+import { Auth, User as FirebaseUser, UserCredential, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail as firebaseSendPasswordResetEmail, sendEmailVerification } from '@angular/fire/auth';
 import { Firestore, doc, setDoc } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, from, map, switchMap, tap } from 'rxjs';
@@ -115,5 +115,31 @@ export class AuthService {
 
   getCurrentUser(): User | null {
     return this.userSubject.value;
+  }
+
+  /**
+   * Send password reset email to the specified email address
+   * @param email The email address to send the password reset link to
+   */
+  async sendPasswordResetEmail(email: string): Promise<void> {
+    try {
+      await firebaseSendPasswordResetEmail(this.auth, email);
+    } catch (error) {
+      console.error('Password reset email error:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Send email verification to the current user
+   * @param user The Firebase user to send verification email to
+   */
+  async sendEmailVerification(user: FirebaseUser): Promise<void> {
+    try {
+      await sendEmailVerification(user);
+    } catch (error) {
+      console.error('Email verification error:', error);
+      throw error;
+    }
   }
 }

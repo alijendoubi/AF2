@@ -1,20 +1,22 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: '{{FIREBASE_API_KEY}}',
-    authDomain: '{{FIREBASE_AUTH_DOMAIN}}',
-    projectId: '{{FIREBASE_PROJECT_ID}}',
-    storageBucket: '{{FIREBASE_STORAGE_BUCKET}}',
-    messagingSenderId: '{{FIREBASE_MESSAGING_SENDER_ID}}',
-    appId: '{{FIREBASE_APP_ID}}'
+    apiKey: "AIzaSyAIVNQCm_LO110yyNeLPPhDDUTgbW7ks50",
+    authDomain: "autoflowos.firebaseapp.com",
+    databaseURL: "https://autoflowos-default-rtdb.firebaseio.com",
+    projectId: "autoflowos",
+    storageBucket: "autoflowos.firebasestorage.app",
+    messagingSenderId: "840863528496",
+    appId: "1:840863528496:web:8afb02b6516641d1475ff5",
+    measurementId: "G-12NG25X0WP"
   },
   emailJs: {
-    publicKey: '{{EMAILJS_PUBLIC_KEY}}',
-    serviceId: '{{EMAILJS_SERVICE_ID}}',
-    welcomeTemplateId: '{{EMAILJS_WELCOME_TEMPLATE_ID}}',
+    publicKey: 'YMaCcS91uYUtLB8_o',
+    serviceId: 'service_j6pkkrb',
+    welcomeTemplateId: 'template_pz0xfsq',
     contactTemplateId: '{{EMAILJS_CONTACT_TEMPLATE_ID}}',
-    newsletterTemplateId: '{{EMAILJS_NEWSLETTER_TEMPLATE_ID}}',
-    betaSignupTemplateId: '{{EMAILJS_BETA_SIGNUP_TEMPLATE_ID}}'
+    newsletterTemplateId: 'template_pz0xfsq',
+    betaSignupTemplateId: 'template_subscription'
   }
 };
 

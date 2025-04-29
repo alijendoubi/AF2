@@ -114,20 +114,49 @@
       "HAVE_ACCOUNT": "Already have an account?",
       "LOGIN": "Login",
       "ERROR": "An error occurred while creating your account",
-      "PASSWORD_MISMATCH": "Passwords do not match"
+      "PASSWORD_MISMATCH": "Passwords do not match",
+      "VERIFICATION_SENT": "Account created successfully! Please check your email to verify your account."
+    },
+    "FORGOT_PASSWORD": {
+      "TITLE": "Forgot Password",
+      "EMAIL": "Email",
+      "SUBMIT": "Reset Password",
+      "REMEMBER_PASSWORD": "Remember your password?",
+      "LOGIN": "Login",
+      "SUCCESS": "Password reset email sent. Please check your inbox.",
+      "ERROR": "An error occurred while sending the password reset email."
     }
   },
   "DASHBOARD": {
     "WELCOME": "Welcome, {{name}}!",
     "OVERVIEW": "Overview",
+    "REFRESH": "Refresh",
     "STATS": {
       "USERS": "Total Users",
       "SUBSCRIPTIONS": "Active Subscriptions",
       "REVENUE": "Monthly Revenue"
     },
+    "QUICK_ACTIONS": {
+      "TITLE": "Quick Actions",
+      "NEW_WORKFLOW": "New Workflow",
+      "SETTINGS": "Settings",
+      "HELP": "Help",
+      "PROFILE": "Profile"
+    },
     "ACTIVITY": {
       "TITLE": "Recent Activity",
-      "NO_ACTIVITY": "No recent activity"
+      "NO_ACTIVITY": "No recent activity",
+      "ACTION": "Action",
+      "DETAILS": "Details",
+      "TIME": "Time",
+      "CLEAR": "Clear All",
+      "FILTER": {
+        "ALL": "All Activities",
+        "LOGIN": "Login Activities",
+        "SUBSCRIPTION": "Subscription Activities",
+        "PROFILE": "Profile Activities",
+        "SYSTEM": "System Activities"
+      }
     },
     "SYSTEM_HEALTH": {
       "TITLE": "System Health",
@@ -143,6 +172,16 @@
       "STATUS": "Status",
       "RENEWAL": "Next Renewal",
       "UPGRADE": "Upgrade Plan"
+    },
+    "USAGE": {
+      "TITLE": "Usage Statistics",
+      "STORAGE": "Storage",
+      "API_CALLS": "API Calls"
+    },
+    "RECENT_PROJECTS": {
+      "TITLE": "Recent Projects",
+      "NO_PROJECTS": "No recent projects",
+      "VIEW_ALL": "View All Projects"
     }
   },
   "ADMIN": {
@@ -189,7 +228,8 @@
     "ACTIONS": "Actions",
     "CONFIRM": "Are you sure?",
     "YES": "Yes",
-    "NO": "No"
+    "NO": "No",
+    "DETAILS": "Details"
   },
   "FOOTER": {
     "DESCRIPTION": "AutoFlowOS - Making workflow automation accessible to everyone.",
@@ -226,5 +266,75 @@
     "REQUIRED": "This field is required",
     "EMAIL": "Please enter a valid email address",
     "VALID_EMAIL": "Please enter a valid email address"
+  },
+  "CONTACT": {
+    "TITLE": "Contact Us",
+    "SUBTITLE": "Have questions or feedback? We'd love to hear from you. Get in touch with our team.",
+    "FORM": {
+      "TITLE": "Send Us a Message",
+      "NAME": "Name",
+      "NAME_REQUIRED": "Name is required",
+      "EMAIL": "Email",
+      "EMAIL_REQUIRED": "Email is required",
+      "EMAIL_INVALID": "Please enter a valid email address",
+      "SUBJECT": "Subject",
+      "SUBJECT_REQUIRED": "Subject is required",
+      "MESSAGE": "Message",
+      "MESSAGE_REQUIRED": "Message is required",
+      "SUBMIT": "Send Message",
+      "SUCCESS": "Thank you! Your message has been sent successfully.",
+      "ERROR": "Oops! Something went wrong. Please try again."
+    },
+    "INFO": {
+      "TITLE": "Contact Information",
+      "ADDRESS": {
+        "TITLE": "Our Address"
+      },
+      "EMAIL": {
+        "TITLE": "Email Us"
+      },
+      "PHONE": {
+        "TITLE": "Call Us"
+      }
+    },
+    "HOURS": {
+      "TITLE": "Business Hours",
+      "MONDAY_FRIDAY": "Monday - Friday",
+      "SATURDAY": "Saturday",
+      "SUNDAY": "Sunday",
+      "CLOSED": "Closed"
+    },
+    "SOCIAL": {
+      "TITLE": "Follow Us"
+    }
+  },
+  "ABOUT": {
+    "TITLE": "About Us",
+    "SUBTITLE": "Learn about our story, mission, and the team behind AutoFlowOS",
+    "STORY": {
+      "TITLE": "Our Story",
+      "PARAGRAPH1": "AutoFlowOS began in 2020 with a simple idea: make workflow automation accessible to everyone, not just technical experts.",
+      "PARAGRAPH2": "What started as a passion project between a small group of engineers has grown into a comprehensive platform trusted by businesses worldwide.",
+      "PARAGRAPH3": "Today, our team continues to innovate and build solutions that help organizations streamline their operations and focus on what matters most."
+    },
+    "MISSION": {
+      "TITLE": "Our Mission",
+      "PARAGRAPH1": "We believe that by automating routine tasks, we can free up human potential for more creative and meaningful work.",
+      "PARAGRAPH2": "Our mission is to provide powerful yet intuitive tools that help businesses of all sizes transform their workflows and boost productivity.",
+      "INNOVATION": "Innovation First",
+      "INNOVATION_TEXT": "We're constantly pushing the boundaries of what's possible in workflow automation.",
+      "COMMUNITY": "Community-Driven",
+      "COMMUNITY_TEXT": "We build our platform with input from users to ensure it solves real-world problems."
+    },
+    "TEAM": {
+      "TITLE": "Meet Our Team",
+      "SUBTITLE": "The passionate people behind AutoFlowOS"
+    },
+    "CTA": {
+      "TITLE": "Ready to Transform Your Workflow?",
+      "SUBTITLE": "Join thousands of businesses already using AutoFlowOS to streamline their operations.",
+      "CONTACT": "Contact Us",
+      "SIGNUP": "Get Started"
+    }
   }
 }

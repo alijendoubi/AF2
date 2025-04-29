@@ -36,6 +36,11 @@ export const routes: Routes = [
         title: 'Sign Up - AutoFlowOS'
       },
       {
+        path: 'forgot-password',
+        loadComponent: () => import('./pages/auth/forgot-password/forgot-password.component').then(m => m.ForgotPasswordComponent),
+        title: 'Forgot Password - AutoFlowOS'
+      },
+      {
         path: 'dashboard',
         loadComponent: () => import('./pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
         canActivate: [isAuthenticated],
@@ -72,6 +77,16 @@ export const routes: Routes = [
         path: 'privacy',
         loadComponent: () => import('./pages/privacy/privacy.component').then(m => m.PrivacyComponent),
         title: 'Privacy Policy - AutoFlowOS'
+      },
+      {
+        path: 'features',
+        loadComponent: () => import('./pages/features/features.component').then(m => m.FeaturesComponent),
+        title: 'Features - AutoFlowOS'
+      },
+      {
+        path: 'mission',
+        loadComponent: () => import('./pages/mission/mission.component').then(m => m.MissionComponent),
+        title: 'Our Mission - AutoFlowOS'
       }
     ]
   },

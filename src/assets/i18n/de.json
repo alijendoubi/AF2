@@ -221,5 +221,75 @@
     "REQUIRED": "Dieses Feld ist erforderlich",
     "EMAIL": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
     "VALID_EMAIL": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+  },
+  "CONTACT": {
+    "TITLE": "Kontaktieren Sie Uns",
+    "SUBTITLE": "Haben Sie Fragen oder Feedback? Wir würden uns freuen, von Ihnen zu hören. Nehmen Sie Kontakt mit unserem Team auf.",
+    "FORM": {
+      "TITLE": "Senden Sie uns eine Nachricht",
+      "NAME": "Name",
+      "NAME_REQUIRED": "Name ist erforderlich",
+      "EMAIL": "E-Mail",
+      "EMAIL_REQUIRED": "E-Mail ist erforderlich",
+      "EMAIL_INVALID": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "SUBJECT": "Betreff",
+      "SUBJECT_REQUIRED": "Betreff ist erforderlich",
+      "MESSAGE": "Nachricht",
+      "MESSAGE_REQUIRED": "Nachricht ist erforderlich",
+      "SUBMIT": "Nachricht senden",
+      "SUCCESS": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+      "ERROR": "Hoppla! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    },
+    "INFO": {
+      "TITLE": "Kontaktinformationen",
+      "ADDRESS": {
+        "TITLE": "Unsere Adresse"
+      },
+      "EMAIL": {
+        "TITLE": "E-Mail Kontakt"
+      },
+      "PHONE": {
+        "TITLE": "Rufen Sie uns an"
+      }
+    },
+    "HOURS": {
+      "TITLE": "Geschäftszeiten",
+      "MONDAY_FRIDAY": "Montag - Freitag",
+      "SATURDAY": "Samstag",
+      "SUNDAY": "Sonntag",
+      "CLOSED": "Geschlossen"
+    },
+    "SOCIAL": {
+      "TITLE": "Folgen Sie uns"
+    }
+  },
+  "ABOUT": {
+    "TITLE": "Über Uns",
+    "SUBTITLE": "Erfahren Sie mehr über unsere Geschichte, unsere Mission und das Team hinter AutoFlowOS",
+    "STORY": {
+      "TITLE": "Unsere Geschichte",
+      "PARAGRAPH1": "AutoFlowOS begann 2020 mit einer einfachen Idee: Workflow-Automatisierung für alle zugänglich zu machen, nicht nur für technische Experten.",
+      "PARAGRAPH2": "Was als Leidenschaftsprojekt einer kleinen Gruppe von Ingenieuren begann, hat sich zu einer umfassenden Plattform entwickelt, der Unternehmen weltweit vertrauen.",
+      "PARAGRAPH3": "Heute setzt unser Team die Innovation fort und entwickelt Lösungen, die Organisationen dabei helfen, ihre Abläufe zu optimieren und sich auf das Wesentliche zu konzentrieren."
+    },
+    "MISSION": {
+      "TITLE": "Unsere Mission",
+      "PARAGRAPH1": "Wir glauben, dass wir durch die Automatisierung von Routineaufgaben menschliches Potenzial für kreativere und sinnvollere Arbeit freisetzen können.",
+      "PARAGRAPH2": "Unsere Mission ist es, leistungsstarke und dennoch intuitive Werkzeuge bereitzustellen, die Unternehmen jeder Größe dabei helfen, ihre Arbeitsabläufe zu transformieren und die Produktivität zu steigern.",
+      "INNOVATION": "Innovation zuerst",
+      "INNOVATION_TEXT": "Wir erweitern ständig die Grenzen des Möglichen in der Workflow-Automatisierung.",
+      "COMMUNITY": "Gemeinschaftsorientiert",
+      "COMMUNITY_TEXT": "Wir entwickeln unsere Plattform mit Benutzerfeedback, um sicherzustellen, dass sie reale Probleme löst."
+    },
+    "TEAM": {
+      "TITLE": "Lernen Sie unser Team kennen",
+      "SUBTITLE": "Die leidenschaftlichen Menschen hinter AutoFlowOS"
+    },
+    "CTA": {
+      "TITLE": "Bereit, Ihren Arbeitsablauf zu transformieren?",
+      "SUBTITLE": "Schließen Sie sich Tausenden von Unternehmen an, die bereits AutoFlowOS nutzen, um ihre Abläufe zu optimieren.",
+      "CONTACT": "Kontaktieren Sie uns",
+      "SIGNUP": "Jetzt starten"
+    }
   }
 }

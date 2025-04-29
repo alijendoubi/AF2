@@ -39,8 +39,8 @@ declare var bootstrap: any;
       <div class="container py-4 py-lg-5">
         <div class="row align-items-center">
           <div class="col-lg-6 mb-4 mb-lg-0">
-            <div class="img-wrapper rounded-4 overflow-hidden shadow-lg">
-              <img src="assets/images/about-image.svg" alt="About AutoFlowOS" class="img-fluid scale-on-hover">
+            <div class="img-wrapper">
+              <img src="assets/images/about-image.png" alt="About AutoFlowOS" class="img-fluid">
             </div>
           </div>
           <div class="col-lg-6">
@@ -750,6 +750,14 @@ declare var bootstrap: any;
     /* Enhanced hover transitions */
     .card, .mission-value, .btn {
       will-change: transform;
+    }
+
+    /* Simple image styling */
+    .img-wrapper {
+      display: block;
+      width: 100%;
+      max-width: 60%;
+      margin: 0 auto 1rem auto;
     }
 
     .form-control, .btn {

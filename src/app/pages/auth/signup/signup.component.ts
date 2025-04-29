@@ -21,6 +21,10 @@ import { AuthService, EmailService } from '../../../services';
                 {{ errorMessage | translate }}
               </div>
               
+              <div *ngIf="successMessage" class="alert alert-success">
+                {{ successMessage | translate }}
+              </div>
+              
               <form (ngSubmit)="signup()" #signupForm="ngForm">
                 <div class="mb-3">
                   <label for="name" class="form-label">{{ 'AUTH.SIGNUP.NAME' | translate }}</label>
@@ -132,6 +136,8 @@ export class SignupComponent {
   protected isLoading = false;
   protected errorMessage = '';
   
+  protected successMessage = '';
+
   protected async signup() {
     if (this.isLoading) return;
     if (this.password !== this.confirmPassword) {
@@ -141,9 +147,19 @@ export class SignupComponent {
     
     this.isLoading = true;
     this.errorMessage = '';
+    this.successMessage = '';
     
     try {
       const credential = await this.authService.signup(this.email, this.password, this.name);
+      
+      // Send email verification
+      try {
+        await this.authService.sendEmailVerification(credential.user);
+        this.successMessage = 'AUTH.SIGNUP.VERIFICATION_SENT';
+      } catch (verificationError) {
+        console.error('Email verification error:', verificationError);
+        // Continue with signup even if verification email fails
+      }
       
       // Send welcome email
       try {
@@ -153,7 +169,11 @@ export class SignupComponent {
         // Continue with signup even if email fails
       }
       
-      this.router.navigate(['/dashboard']);
+      // Show success message instead of redirecting immediately
+      // This gives the user a chance to see the verification message
+      if (!this.successMessage) {
+        this.router.navigate(['/dashboard']);
+      }
     } catch (error) {
       console.error('Signup error:', error);
       this.errorMessage = 'AUTH.SIGNUP.ERROR';
