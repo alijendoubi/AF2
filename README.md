@@ -42,6 +42,12 @@
   - Dark/Light theme support
   - Modern UI with Bootstrap 5
 
+- **Interactive Chatbot**
+  - AI-powered assistant
+  - Instant responses to common questions
+  - Multi-language support
+  - Customizable responses
+
 ## 📋 Prerequisites
 
 - Node.js (v18.x or later)

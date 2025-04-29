@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { ChatbotComponent } from '../../components/chatbot/chatbot.component';
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, FooterComponent, ChatbotComponent],
   template: `
     <div class="d-flex flex-column min-vh-100">
       <app-navbar />
@@ -15,6 +16,7 @@ import { FooterComponent } from '../../components/footer/footer.component';
         <router-outlet />
       </main>
       <app-footer />
+      <app-chatbot />
     </div>
   `,
   styles: [`
@@ -29,4 +31,3 @@ import { FooterComponent } from '../../components/footer/footer.component';
   `]
 })
 export class MainLayoutComponent {}
-

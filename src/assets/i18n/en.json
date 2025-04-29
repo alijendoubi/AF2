@@ -257,6 +257,17 @@
     "LIGHT": "Light Mode",
     "DARK": "Dark Mode"
   },
+  "CHATBOT": {
+    "TITLE": "AutoFlow Assistant",
+    "WELCOME_MESSAGE": "Hello! I'm your AutoFlow Assistant. How can I help you today?",
+    "INPUT_PLACEHOLDER": "Type your message...",
+    "TYPING": "Assistant is typing...",
+    "SUGGESTIONS": {
+      "FEATURES": "Tell me about features",
+      "PRICING": "What are your pricing plans?",
+      "CONTACT": "How can I contact support?"
+    }
+  },
   "LANGUAGE": {
     "ENGLISH": "English",
     "FRENCH": "French",
