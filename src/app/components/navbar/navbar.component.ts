@@ -24,7 +24,7 @@ import { TranslateModule } from '@ngx-translate/core';
           <ul class="navbar-nav me-auto" style="color: black;" >
             <li class="nav-item">
               <a class="nav-link" routerLink="/" routerLinkActive="active" 
-                 [routerLinkActiveOptions]="{exact: true}">{{ 'NAV.HOME' | translate }}</a>
+                >{{ 'NAV.HOME' | translate }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="/about" routerLinkActive="active">{{ 'NAV.ABOUTUS' | translate }}</a>

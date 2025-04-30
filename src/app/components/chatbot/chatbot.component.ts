@@ -1,5 +1,5 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, inject, PLATFORM_ID, Inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { ChatbotService } from '../../services/chatbot.service';
@@ -322,6 +322,7 @@ import { Message } from '../../interfaces/chatbot.interface';
 })
 export class ChatbotComponent implements OnInit {
   private chatbotService = inject(ChatbotService);
+  private platformId = inject(PLATFORM_ID);
   
   isOpen = false;
   messages: Message[] = [];
@@ -398,28 +399,33 @@ export class ChatbotComponent implements OnInit {
   }
   
   private scrollToBottom(): void {
-    setTimeout(() => {
-      const messagesContainer = document.querySelector('.messages-container');
-      if (messagesContainer) {
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-      }
-    }, 100);
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => {
+        const messagesContainer = document.querySelector('.messages-container');
+        if (messagesContainer) {
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+      }, 100);
+    }
   }
   
   private addEntranceAnimation(): void {
-    // Add a class to trigger the entrance animation
-    const chatbotContainer = document.querySelector('.chatbot-container');
-    if (chatbotContainer) {
-      // First make it invisible
-      (chatbotContainer as HTMLElement).style.opacity = '0';
-      (chatbotContainer as HTMLElement).style.transform = 'translateY(20px) scale(0.8)';
-      
-      // Then animate it in
-      setTimeout(() => {
-        (chatbotContainer as HTMLElement).style.transition = 'opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
-        (chatbotContainer as HTMLElement).style.opacity = '1';
-        (chatbotContainer as HTMLElement).style.transform = 'translateY(0) scale(1)';
-      }, 300);
+    // Only run animation in browser environment
+    if (isPlatformBrowser(this.platformId)) {
+      // Add a class to trigger the entrance animation
+      const chatbotContainer = document.querySelector('.chatbot-container');
+      if (chatbotContainer) {
+        // First make it invisible
+        (chatbotContainer as HTMLElement).style.opacity = '0';
+        (chatbotContainer as HTMLElement).style.transform = 'translateY(20px) scale(0.8)';
+        
+        // Then animate it in
+        setTimeout(() => {
+          (chatbotContainer as HTMLElement).style.transition = 'opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+          (chatbotContainer as HTMLElement).style.opacity = '1';
+          (chatbotContainer as HTMLElement).style.transform = 'translateY(0) scale(1)';
+        }, 300);
+      }
     }
   }
 }
